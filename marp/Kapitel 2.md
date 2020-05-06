@@ -69,6 +69,8 @@ https://de.wikipedia.org/wiki/Bandbreitenlängenprodukt
 
 # 5. Beschreibe das Konzept der Strukturierten Verkabelung.
 
+https://www.elektronik-kompendium.de/sites/net/0908031.htm
+
 ---
 
 # 6. Ergänze den Typ des optischen Kabels und die Form der Lichtimpulse am Ausgang (Bild links). Mit welcher der beiden Glasfasertypen kann man eine größere Distanz überbrücken (Bild rechts)?
