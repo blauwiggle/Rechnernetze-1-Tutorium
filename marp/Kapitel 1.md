@@ -169,7 +169,7 @@ Wieso dann?
 
 ## 3. OSI
 
-Das verschieben wir einfach mal auf Frage 6 :arrow_down: 
+Das verschieben wir einfach mal auf Frage 7 :arrow_down: 
 
 ---
 
