@@ -1,5 +1,7 @@
 ---
 
+theme: uncover #uncover #default #gaia
+class: invert
 theme: default
 paginate: true
 marp: true
@@ -51,6 +53,65 @@ Das ist beispielsweise für ISDN oder Ethernet wichtig.
 # 2. Wozu gibt es Kabelkategorien? Erläutere die Begriffe S/STP, S/UTP, ...
 
 https://www.elektronik-kompendium.de/sites/net/0603191.htm
+
+---
+
+## Kategorien
+- Kabel können so spezifiziert werden
+- verschiedene Qualitätsanforderungen
+    - man braucht kein Cat. 8 Kabel, für ISDN
+
+## Mit steigender Kategorie
+- mehr Kabelwindungen / cm
+- bessere Isolierung
+- weniger Crosstalk
+- höhere Bandbreite
+
+---
+
+# :exclamation: Beachte bitte ...
+
+Die verfügbare Bandbreite und die Länge des Kabels stehen in Korrelation. Übersteigt die Frequenz die Übertragung, reduziert sich auch die mögliche Kabellänge. Bei einer höheren Frequenz kann nur eine geringere Entfernung zurück gelegt werden. Danach ist das Signal murks.
+
+---
+
+# Übersicht der *unwichtigen* Kategorien
+
+> Cat. 1 und Cat. 2 sind rein informell definiert worden
+
+| Kategorie  	| Bandbreite  	| Anwendung  	|
+|---	    |---:	|---	|
+| Cat. 1  	| 0,4 kHz  	| Telefon- und Modemleitungen  	|
+| Cat. 2  	| 4 MHz  	| Terminal-Systeme, ISDN   	|
+| Cat. 3  	| 12,5 - 16 MHz  	| 10Base-T, 100Base-T4, ISDN, analoges Telefon 	|
+| Cat. 4  	| 20 MHz  	| Token-Ring  	|
+
+---
+
+# Übersicht der **_wichtigen_** Kategorien
+
+| Kategorie  	| Bandbreite  	| Anwendung  	|
+|---	    |---:	|---	|
+| Cat. 5  	| 100 MHz  	| 100Base-TX, SONET, SOH  	|
+| Cat. 5e 	| 100 MHz  	| 1000Base-T  	|
+| Cat. 6  	| 250 MHz  	| 1000Base-T, 155-MBit-ATM, 622-MBit-ATM  	|
+| Cat. 6A  	| 500 MHz  	| 10GBase-T (bis 55 Meter)  	|
+| Cat. 7  	| 600 MHz  	| 10GBase-T (bis 100 Meter)  	|
+| Cat. 7A  	| 1000 MHz  	| 10GBase-T  	|
+| Cat. 8  	| 1,6 - 2 GHz  	| 40GBase-T und 100GBase-T  	|
+
+---
+
+# Twisted-Pair-Kabel Bezeichnungen
+
+
+
+---
+
+cat tabelle
+schema der kabel
+bilder
+evtl stecker
 
 ---
 
