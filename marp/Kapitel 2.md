@@ -1,10 +1,8 @@
 ---
-
-theme: uncover #uncover #default #gaia
-class: invert
-theme: default
-paginate: true
 marp: true
+theme: default #uncover #gaia #default
+class: invert
+paginate: true
 headingDivider: true
 footer: 'HdM Stuttgart - Rechnernetze - Tutorium | Copyright © Michael Vanhee, mv068@hdm-stuttgart.de, Mai 2020'
 
@@ -102,14 +100,57 @@ Die verfügbare Bandbreite und die Länge des Kabels stehen in Korrelation. Übe
 
 ---
 
-# Twisted-Pair-Kabel Bezeichnungen
+# Twisted-Pair-Kabel Bezeichnungssystem
 
-
+![bg 90% right:50%](https://github.com/blauwiggle/Rechnernetze-1-Tutorium/blob/master/marp/images/02_bezeichnungssystem.jpg?raw=true)
 
 ---
 
-cat tabelle
-schema der kabel
+## XX steht für die Gesamtschirmung
+- U = ohne Schirm (ungeschirmt)
+- F = Folienschirm (beschichtete Kunststofffolie)
+- S = Geflechtschirm (Drahtgeflecht)
+- SF = Geflecht- und Folienschirm
+
+---
+
+## Y steht für die Aderpaarschirmung
+- U = ohne Schirm (ungeschirmt)
+- F = Folienschirm (beschichtete Kunststofffolie)
+- S = Geflechtschirm (Drahtgeflecht)
+
+---
+
+## ZZ steht für die Verseilungsart
+- TP = Twisted Pair (in der Regel)
+- QP = Quad Pair
+
+---
+
+# XX/Y :exclamation: TP
+
+Gesamtschirmung / Adernpaarschirmung als Twisted Pair
+
+---
+
+## U/UTP - Unscreened/Unshielded Twisted-Pair-Kabel
+
+![bg fit right](https://www.elektronik-kompendium.de/sites/net/fotos/06031914.jpg)
+
+---
+
+## U/FTP - Unscreened/Foiled Twisted-Pair-Kabel
+
+![bg fit right](https://www.elektronik-kompendium.de/sites/net/fotos/06031912.jpg)
+
+---
+
+## S/FTP - Screened/Foiled Twisted-Pair-Kabel
+
+![bg fit right](https://www.elektronik-kompendium.de/sites/net/fotos/06031911.jpg)
+
+---
+
 bilder
 evtl stecker
 
