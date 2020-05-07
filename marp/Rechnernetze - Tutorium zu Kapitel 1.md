@@ -375,7 +375,4 @@ https://www.layer2communications.com/about-us/
 
 # Bis nächste Woche :)
 
-
-
 > ```git pull``` nicht vergessen
-

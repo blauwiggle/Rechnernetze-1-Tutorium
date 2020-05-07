@@ -11,7 +11,7 @@ footer: 'HdM Stuttgart - Rechnernetze - Tutorium | Copyright © Michael Vanhee, 
 
 # Rechnernetze - Tutorium
 # zu Kapitel 1
-    Ergänzungen
+    Supplement Update
 ## 6. Mai 2020
 
 ---
