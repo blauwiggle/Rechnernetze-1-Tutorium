@@ -101,7 +101,7 @@ By Bystander - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php
 
 ---
 
-## Multiplexverfahren sind Methoden zur Signal- und Nachrichtenübertragung. Dabeo werden mehrere Signale gebündelt und übertragen.
+# Multiplexverfahren sind Methoden zur Signal- und Nachrichtenübertragung. Dabei werden mehrere Signale gebündelt und übertragen.
 
 ---
 
@@ -146,7 +146,9 @@ By Bystander - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php
 
 ---
 
-# Ja, da niemand beim Senden bevorzugt wird.
+# Ja. 
+
+## Da niemand beim Senden bevorzugt wird.
 
 ## Aber warum eigentlich?
 

@@ -156,7 +156,7 @@ Gesamtschirmung / Adernpaarschirmung als Twisted Pair
 
 # Prüfungstipp
 
-Schau dir vorab verschiedene Stecker Typen im Bereich der Netzwerktechnik an, wie beispielsweise RJ45, FDDI, SC-Duplex, usw. :stuck_out_tongue_winking_eye:
+Schau dir vorab verschiedene Stecker Typen im Bereich der Netzwerktechnik an, wie beispielsweise RJ45, FDDI, SC-Duplex, .. . Man sollte RJ45 und ein optisches Kabel erkennen. :stuck_out_tongue_winking_eye:
 
 ---
 

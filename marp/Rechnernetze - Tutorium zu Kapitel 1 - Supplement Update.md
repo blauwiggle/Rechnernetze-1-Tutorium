@@ -55,3 +55,11 @@ Die Anzahl der Hops können mit einem **Traceroute** ermittelt werden.
 ---
 
 Beides sind Weitverkehrsnetze, die nahezu identisch sind. Vor WhatsApp und Co. hatte man noch telefoniert :phone:. Dazu ergänzten beide Systeme in den 90er Jahren das Netz und ermöglichten so Geschwindigkeiten von bis zu 2,5 GBit / Sekunde. Die Strukturen bestehen aus DWDM-Ringstrukturen. DWDM besprechen wir im kommenden Kapitel. In den vermaschten Netzstrukturen sind vordefinierte Ersatzstrecken enthalten.
+
+---
+
+## Ergänzungen von Herr Kiefer
+
+SDH/SONET waren und sind es immer noch, Layer 2 Alternativen. Vorwiegend heute im wo wirkliche Echtzeit benötigt wird, zum Beispiel werden Radarbilder der FLugsicherung über SDH übertragen. Einsatz auch im Bereich der Rettungskräfte (die eigene Netze haben).
+
+Die Marktbedeutung hat nachgelassen, da sie zu teuer sind. Geschwindkeiten bis 40 GBit / Sekunde sind möglich, in Verbindung mit DWDM deutlich mehr.
