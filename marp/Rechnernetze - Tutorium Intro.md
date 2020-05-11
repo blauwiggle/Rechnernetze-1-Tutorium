@@ -1,6 +1,7 @@
 ---
 
-theme: default
+theme: uncover #uncover #default #gaia
+class: invert
 paginate: true
 marp: true
 headingDivider: true
