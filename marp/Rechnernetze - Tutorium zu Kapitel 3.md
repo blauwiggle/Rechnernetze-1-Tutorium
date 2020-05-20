@@ -8,8 +8,8 @@ footer: 'HdM Stuttgart - Rechnernetze - Tutorium | Copyright © Michael Vanhee, 
 ---
 
 # Rechnernetze - Tutorium
-# zu Kapitel 2
-## ??. Mai 2020
+# zu Kapitel 3
+## 20. Mai 2020
 
 ---
 
@@ -131,7 +131,7 @@ By Bystander - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php
 
 # Ethernet
 
-- Zeit Multiplex
+- asynchrones Zeit Multiplex
 - nach Bedarf
 - dezentral
 - konkurrierend
@@ -169,19 +169,72 @@ Wenn mehrere Stationen gleichzeitig senden, erkennen sie die Kollision
 
 ---
 
-
-
----
-
 # 2. Beschreibe, wie sich bei CSMA/CD-Ethernet Distanz, Paketlänge und Bitrate gegenseitig beeinflussen.
 
 ---
+
+# :congratulations: (aka congratulations) der BEB Algorithmus ..
+
+## .. ist nicht Prüfungsrelevant dieses Semester :raised_hands:
+
+---
+
+# Was jedoch wichtig ist, ist wie sich Distanz, Paketlänge und Bitrate gegenseitig beeinflussen.
+
+## Hast du eine Idee, was es damit aufsich hat?
+
+---
+
+# Netzausdehnung und Laufzeitbudget
+## Distanz, Paketlänge und Bitrate stehen im CSMA/CD Ethernet in direktem Zusammenhang!
+
+---
+
+## Beispiel
+- Übertragungsgeschwindigkeit bei Ethernet mit 10 MBit / Sekunde
+- Framelänge von 64 Byte (512 bit)
+
+## Ziel
+- Während des Sendens eine Kollision erkennen
+
+---
+
+# :fire: Formel - Zeitraum für die Kollisionserkennung
+
+# $t_{frame}$ = $\frac{n[bit]}{b[\frac{bit}{s}]}$
+
+# $t_{frame}$ = $\frac{(64 * 8) bit}{10*10^6\frac{bit}{s}}$ = 51,2 µs
+
+## Das bedeutet, dass innerhalb von 51,2 µs die Kollision bei 10 MBit / Sekunde und einer Frame Größe von 64 Byte erkannt werden muss.
+
+---
+
+# Netzausdehnung und Laufzeitbudget
+
+| Geschwindigkeit 	| Typ | Ausdehnung in Metern  	| Zeit  	|
+|---:	    |:---:              |---:	            |---:	|
+| 10 MBit  	| Ethernet  	    |* 5.000 Meter  	| 51,2 µs |
+| 100 MBit  | Fast-Ethernet  	| 500 Meter             | 5,12 µs  	|
+| 1.000 MBit| Gigabit-Ethernet  | 50 Meter              | 0,512 µs|
+
+## * Kabeleigenschaften wie Dämpfung, Schirmung und Verarbeitungszeit begrenzen die maximale Ausdehnung auf 3.000 Meter. 
 
 ---
 
 # 3. Wie wird die **_Taktsynchronisation_** zwischen zwei Stationen bei Ethernet gelöst?
 
 ---
+
+# Präambel
+- 7 Bytes
+- dient der **_Takt Synchronisation_**
+- alternierende Bitfolge *101010...1010*
+
+# SFD
+- 1 Byte
+- auf diese folgt der Start Frame Delimiter (SFD) mit der Bitfolge *10101011*
+
+Dann beginnt die MAC Adresse und somit der eigentliche Inhalt ...
 
 ---
 
@@ -209,6 +262,8 @@ Von Stefan Schmidt - Enhancement of Manchester Encoding, Gemeinfrei, https://com
 - CSMA/CD benötigt und es ist eine
 - sehr geringe Längenausdehnung möglich
     - Zeit verkürzt sich, in der man Kollisionen erkennen kann
+
+---
 
 # Lösung
 - Carrier-Extension
@@ -324,3 +379,13 @@ Von Stefan Schmidt - Enhancement of Manchester Encoding, Gemeinfrei, https://com
 `14.881 * 1/8 * 46 Byte = 684.625 Byte pro Sekunde`
 
 `813 * 1/8 * 1500 Byte = 1.219.500 Byte pro Sekunde`
+
+---
+
+# Weitere Fragen?
+
+Bitte per E-Mail an [mv068@hdm-stuttgart.de](mailto:mv068@hdm-stuttgart.de) oder auf GitHub direkt.
+
+# Bis nächste Woche :smile:
+
+> ```git pull``` nicht vergessen
