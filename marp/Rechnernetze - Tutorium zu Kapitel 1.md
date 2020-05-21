@@ -89,7 +89,7 @@ footer: 'HdM Stuttgart - Rechnernetze - Tutorium | Copyright © Michael Vanhee, 
 - Gut geeignet für Algorithmen
 
 ### Nachteile
-- Bei Verteilerausfall ist gesanter Unterbaum nicht erreichbar
+- Bei Verteilerausfall ist gesamter Unterbaum nicht erreichbar
 - Bei zunehmender Tiefe -> zunehmende Latenz
 
 ---
