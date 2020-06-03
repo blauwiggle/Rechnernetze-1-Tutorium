@@ -30,3 +30,4 @@ VLAN Nachteile können auch Vorteile sein
 Class E Berechnung
 Class E Definition
 PlayStation NAT Typ 2
+Cones besser erklären
