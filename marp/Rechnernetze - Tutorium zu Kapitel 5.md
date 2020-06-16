@@ -9,7 +9,7 @@ footer: 'HdM Stuttgart - Rechnernetze - Tutorium | Copyright © Michael Vanhee, 
 
 # Rechnernetze - Tutorium
 # zu Kapitel 5
-## 3. Juni 2020
+## 17. Juni 2020
 
 Link zu den Folien :arrow_down: 
 https://github.com/blauwiggle/Rechnernetze-1-Tutorium
@@ -172,7 +172,7 @@ Die Broadcast Adresse bekommt man durch die `ODER (OR)` Verknüpfung von IP Adre
 |                    	| erste 24 Bit   	| letzte 8 Bit   	|
 |--------------------	|--------------:	|--------------:	|
 | IP Adresse         	|    192.168.5. 	|      11101000 	|
-| + OR Verknüpfung     	|               	|               	|
+| :exclamation: + OR Verknüpfung     	|               	|               	|
 | negierte Netzmaske 	|        0.0.0. 	|      00000111 	|
 | =                  	|    192.168.5. 	|      11101111 	|
 | Broadcast Adresse  	|    192.168.5. 	|           239 	|
@@ -282,7 +282,7 @@ IPv6 wurde entwickelt und löst IPv4 ab. Das ändern des IPv4 TCP/IP Stacks wird
 
 ---
 
-# Beispiel Notation hast du oben schon gesehen.
+# eine Beispiel Notation hast du oben schon gesehen
 
 - IP 192.168.5.232
 - Netzmaske 255.255.255.248 (/29)
@@ -341,11 +341,21 @@ Was muss man tun?
 
 |           IP 	| 1. Byte 	|  2. Byte 	|  3. Byte 	|  4. Byte 	|   / 	|   Route 	|
 |-------------:	|--------:	|---------:	|---------:	|---------:	|----:	|--------:	|
-|  174.16.0.10 	|     174 	| 00010000 	| 00001010 	| 00000000 	| /28 	| Route 3 	|
-| 174.18.54.89 	|     174 	| 00010010 	| 00110110 	| 01011001 	| /14 	| Route 1 	|
-| 174.16.35.27 	|     174 	| 00010000 	| 00100011 	| 00011011 	| /18 	| Route 2 	|
-| 174.34.56.63 	|     174 	| 00100010 	| 00111000 	| 00111111 	| /10 	| Route 4 	|
+|  174.16.0.10 	|     174 	| 00010000 	| 00001010 	| 00000000 	| /28 	| ? 	|
+| 174.18.54.89 	|     174 	| 00010010 	| 00110110 	| 01011001 	| /14 	| ? 	|
+| 174.16.35.27 	|     174 	| 00010000 	| 00100011 	| 00011011 	| /18 	| ? 	|
+| 174.34.56.63 	|     174 	| 00100010 	| 00111000 	| 00111111 	| /10 	| ? 	|
 
+---
+
+# Lösung
+
+| IP           	| Route   	|
+|--------------	|---------	|
+| 174.16.0.10  	| Route 3 	|
+| 174.18.54.89 	| Route 1 	|
+| 174.16.35.27 	| Route 2 	|
+| 174.34.56.63 	| Route 4 	|
 
 ---
 
@@ -380,7 +390,31 @@ Was muss man tun?
 
 ---
 
-# TODO
+# i.
+
+# Anleitung
+
+---
+
+1. 55 Adressen :arrow_right: 6 Bit (vom 3. Byte) :arrow_right: /18
+2. gegebene Adresse 200.72.71.0 binär schreiben :arrow_right: "200.72.`01000111`.0"
+3. Netz ID berechnen
+
+|                   	| IP Byte 1,2 	| IP Byte 3 binär 	| IP Byte 4 	|
+|-------------------	|-------------	|-----------------	|-----------	|
+| IP Adresse        	| 200.72.     	| 01000111        	| .0        	|
+| :exclamation: + AND Verknüpfung 	|             	|                 	|           	|
+| /18               	| 255.255.    	| 11000000        	| .0        	|
+| Netz ID           	| 200.72.     	| 01000000        	| .0        	|
+
+4. Adressraum geht von 200.72.64.0 bis 200.72.127.0
+5. Einsatz von Longest Match Routing
+
+---
+
+# ii.
+
+# 200.72.100.0 /24
 
 ---
 
@@ -394,7 +428,36 @@ ii.
 
 ---
 
-# TODO
+# Anleitung
+
+1. Du schreibst die IP binär hin und schaust wie weit beide übereinstimmen.
+    > Mach es dir einfach und lass den uninteressanten Teil weg.
+2. Fasse die IPs zusammen
+3. Den übereinstimmen Teil als neue IP notieren
+4. Schrägstrichschreibweise anpassen
+
+---
+
+# i.
+
+
+| IP            	|           	| 3. Byte  	| Routing                      	|
+|---------------	|-----------	|----------	|------------------------------	|
+| 220.56.132/24 	| "220.56." 	| 10000100 	|                              	|
+| 220.56.133/24 	| "220.56." 	| 10000101 	|                              	|
+| 220.56.134/24 	| "220.56." 	| 10000110 	|                              	|
+| 220.56.135/24 	| "220.56." 	| 10000111 	| :arrow_right: 220.56.132 /22 	|
+
+---
+
+# ii.
+
+| IP              	|           	| 3. Byte  	| Routing                        	|
+|-----------------	|-----------	|----------	|--------------------------------	|
+| 220.56.146.0/24 	| "220.56." 	| 10010010 	|                                	|
+| 220.56.147.0/24 	| "220.56." 	| 10010011 	|                                	|
+| 220.56.148.0/24 	| "220.56." 	| 10010100 	|                                	|
+| 220.56.149.0/24 	| "220.56." 	| 10010101 	| :arrow_right: 220.56.144.0 /21 	|
 
 ---
 
