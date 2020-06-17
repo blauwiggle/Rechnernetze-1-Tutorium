@@ -55,6 +55,8 @@ https://github.com/blauwiggle/Rechnernetze-1-Tutorium
 - für die Kommunikation im Internet ist die MAC Adresse unverzichtbar
 - in die Routingtabelle steht jedoch nur die IP Adresse
 - IPs sind nicht Ortsgebunden, logische Abstraktion
+> UPDATE :exclamation: 
+> natürlich sind offizielle IP Adressen von Unternehmen schon ortsansässig
 
 ## Wie erkundet dann ein IP Gerät die MAC Adresse des Empfängers?
 
@@ -185,6 +187,9 @@ Die Broadcast Adresse bekommt man durch die `ODER (OR)` Verknüpfung von IP Adre
 
 Die Subnetzmaske ist nur im lokalen Netz gültig.
 
+> UPDATE :exclamation:
+> Die SN Maske des Ziels spielt schlicht und einfach keine Rolle für die Funktionsweise von IP
+
 ---
 
 # 5. Erläutere
@@ -193,8 +198,9 @@ Die Subnetzmaske ist nur im lokalen Netz gültig.
 
 # NAT - Network Address Translation
 
-- Empfänger- und Absenderadresse durch eine andere ersetzen
-- Änderungen im IP Header
+> UPDATE :exclamation:
+> - Empfängeradresse ~~Absenderadresse~~ durch eine andere ersetzen
+> - Änderungen im IP Header, dadurch ändert sich die FCS auf Layer 2
 - Nutzung privater Adresseräume (bsp. 192.168.0.0/16)
 - Warum?
     - Sicherheit durch verstecken des internen Netz
@@ -234,11 +240,15 @@ Die Subnetzmaske ist nur im lokalen Netz gültig.
 
 # Probleme von NAT
 
+> UPDATE :exclamation:
+
 - manche Protokolle übertragen die IP Adresse im Payload
-    - bsp. SIP und SDP, es sind beides VoIP Protokolle
+    - bsp. SIP und SDP
+    - beide sind VoIP Protokolle
 
 Du musst dir das so vorstellen. Das Telefon kennt zwar dir öffentliche IP Adresse vom VoIP Server, der Server kennt aber deine nicht. Denn im Payload steht bsp. 192.168.1.2 und die private IP Adresse ist von außen nicht erreichbar.
 
+![bg right:33% fit](https://github.com/blauwiggle/Rechnernetze-1-Tutorium/blob/master/marp/images/05_sip.png?raw=true)
 
 ---
 
@@ -273,7 +283,7 @@ IPv6 wurde entwickelt und löst IPv4 ab. Das ändern des IPv4 TCP/IP Stacks wird
 # CIDR - Classless Interdomain Routing / Supernetting
 
 - :exclamation: Gegenteil von Subnetting
-- mehrere Netze mit gleichem IP Adressenanteil werden zu einer Router zusammengefasst
+- mehrere Netze mit gleichem IP Adressenanteil werden zu einer Route zusammengefasst
 
 ## Vorteile
 
