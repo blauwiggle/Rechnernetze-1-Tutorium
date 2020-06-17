@@ -301,6 +301,16 @@ IPv6 wurde entwickelt und löst IPv4 ab. Das ändern des IPv4 TCP/IP Stacks wird
 
 ---
 
+## Zu 10.10.1.32/27 
+### gehört 10.10.1.44
+### aber nicht 10.10.1.90
+
+Von IP_Address_Match.png: Baccala@freesoft.orgderivative work: Zapyon (talk) - IP_Address_Match.png, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=12768693
+
+![bg right:60% fit](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/IP_Address_Match.svg/1920px-IP_Address_Match.svg.png)
+
+---
+
 # VLSM - Variable Length Subnet Masks
 
 - ermöglicht maßgeschneiderte Subnetz Masken
@@ -312,6 +322,20 @@ IPv6 wurde entwickelt und löst IPv4 ab. Das ändern des IPv4 TCP/IP Stacks wird
 - Routing Tabelle wird reduziert
 - mehrere Teilnetze werden mit einem Eintrag zusammengefasst
  :arrow_right: Routen Aggregation
+
+---
+
+# VLSM Beispiel
+
+> Aus dem Adressblock 10.1.0.0/16 wird für die Adressierung von Punkt-zu-Punkt-Netzen ein Subnetz 10.1.1.0/24 reserviert. Aus diesem wird dann für das erste Punkt-zu-Punkt-Netz das Subnetz 10.1.1.0/30, das zweite 10.1.1.4/30 etc. entnommen.
+
+---
+
+# Hausaufgaben :smile:
+
+## Fleißig üben! 
+
+Zum Beispiel hier: http://www.eex-online.de/informatik.php bei Netzwerke auf [CIDR](http://www.eex-online.de/informatik/cidr.html) und [VLSM](http://www.eex-online.de/informatik/vlsm.html) klicken. Es generiert dir Aufgaben, zeigt dir den Lösungsweg und die Lösung auf.
 
 ---
 
