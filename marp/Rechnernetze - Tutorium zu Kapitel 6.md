@@ -43,6 +43,36 @@ https://github.com/blauwiggle/Rechnernetze-1-Tutorium
 
 ---
 
+# Erläutere das Prinzip der IP Fragmentierung.
+
+Das Paket ist für den nachfolgenden Übertragungsweg zu lang, daher wird fragmentiert.
+
+![bg right:50% auto](https://github.com/blauwiggle/Rechnernetze-1-Tutorium/blob/master/marp/images/06_fragmentierung.png?raw=true)
+
+Dabei übernimmt jedes Fragment den IP Header.
+
+---
+
+# Wer fragmentiert warum und wie?
+
+- Der Router bei IPv4, sofern das Paket für den nachfolgenden Übertragungsweg zu lang ist.
+
+- Dabei muss die MTU (Maximum Transmission Unit) berücksichtigt werden. Das Paket kann nicht länger als die MTU sein.
+
+- Die Felder Identification, Fragment Offset und die Flags DF/MF werden angepasst
+    - DF = 1 :arrow_right: Fragmentierung verboten
+    - MF = 1 :arrow_right: weitere Fragmente folgen
+    - MF = 0 :arrow_right: letztes Fragment
+
+---
+
+# Wer setzt die Fragmente wieder zusammen?
+
+- Das Gerät an der Ziel IP (bei IPv4 und IPv6).
+- Ist ein Fragment fehlerhaft, werden alle Fragmente des Frames verworfen und das gesamte Paket wird erneut angefordert.
+
+---
+
 # 2. 
 # Welche Vorteile hat der Einsatz von IPv6?
 # Welche Hindernisse bei der Migration siehst du?
@@ -50,7 +80,83 @@ https://github.com/blauwiggle/Rechnernetze-1-Tutorium
 
 ---
 
+# Welche Vorteile hat der Einsatz von IPv6?
+
+- großer Adressraum
+    - IPv6 $2^{128} = 340.282.366.900.000.000.000.000.000.000.000.000.000$ (Sextillionen)
+    - IPv4 $2^{32} = 4.294.967.296$
+- NAT hat ausgediehnt
+- Privacy Extensions
+- keine IP Klassen
+- einfacher Protokollaufbau (Performance)
+- verbesserte Sicherheit (Authentifizierung und Verschlüsselung)
+
+---
+
+# Welche Hindernisse bei der Migration siehst du?
+
+## Beispiel von mir ..
+
+- Bist du bei Unitymedia?
+- Hast du einen DS Lite (Dual Stack Lite) Anschluss?
+- Deine FritzBox hat nur eine IPv6?
+- Du möchtest von unterwegs mit IPv4 einfach auf dein Heimnetz zugreifen?
+
+Schonmal ausprobiert? Hat nicht geklappt? Lösungen heißen [tunnel6](https://github.com/wojtekka/6tunnel) oder [socat](https://repo.or.cz/socat.git), brauchen jedoch bsp. einen vRoot außerhalb deines Netzwerks mit einer IPv4. Alternativ den Power Upload bestellen, mit der Option von DS-Lite auf DS umgestellt zu werden.
+
+Und hier sind wir schon bei den Problemen ..
+
+---
+
+# Welche Hindernisse bei der Migration siehst du?
+
+- Koexistenz von IPv4 und IPv6
+    - Ein komplettes Umstellen von IPv4 auf IPv6 ist noch nicht möglich, da nicht alle Geräte kompatibel sind.
+- Aufgrund intelligenter Ressourcennutzung bei IPv4, herrscht weniger Druck zur vollständigen Umstellung
+- Hardware Umstellungen
+    - Carrier
+    - Provider
+    - User (alter Router)
+
+Ein kompletter Umstieg bedeutet hohe Kosten.
+
+---
+
+# Durch welche Ansätze versucht IPv6 die Veerarbeitungsgeschwindigkeit in Routern zu erhöhen?
+
+- Header optimiert
+:arrow_right: wenig genutzte Pflichtfelder bei IPv4 werden optional
+- Absender des IPv6 Pakets fragmentiert
+- keine Checksumme
+- Flow Label
+:arrow_right: Das Flow Label kennzeichnet Pakete für ein viel schnelleres Routing.
+
+---
+
 # 3. Grenze MTU und MSS voneinander ab.
+
+---
+
+<!--
+_backgroundColor: white
+_color: black
+-->
+
+<!-- _backgroundImage: "linear-gradient(to bottom, #67b8e3, #0288d1)" -->
+
+
+
+![contrast:200% bg right:40% contain](https://github.com/blauwiggle/Rechnernetze-1-Tutorium/blob/master/marp/images/06_mss.png?raw=true)
+
+## MSS - Maximum Segment Size
+- Die MSS gibt nur den Platz für den Payload im TCP/IP Paket an.
+
+## MTU - Maximum Transmission Unit
+- Die MTU gibt die Größe des kompletten TCP/IP Pakets an.
+
+:bulb: MTU ist die obere Grenze an maximaler Paketgröße der unteren Schichten.
+
+---
 
 ---
 
