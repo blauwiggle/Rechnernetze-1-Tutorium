@@ -9,7 +9,7 @@ footer: 'HdM Stuttgart - Rechnernetze - Tutorium | Copyright © Michael Vanhee, 
 
 # Rechnernetze - Tutorium
 # zu Kapitel 6
-## 24. Juni 2020
+## 08. Juli 2020
 
 Link zu den Folien :arrow_down: 
 https://github.com/blauwiggle/Rechnernetze-1-Tutorium
@@ -43,7 +43,7 @@ https://github.com/blauwiggle/Rechnernetze-1-Tutorium
 
 ---
 
-# Erläutere das Prinzip der IP Fragmentierung.
+# Erläutere das Prinzip der IP Fragmentierung
 
 Das Paket ist für den nachfolgenden Übertragungsweg zu lang, daher wird fragmentiert.
 
@@ -137,38 +137,115 @@ Ein kompletter Umstieg bedeutet hohe Kosten.
 
 ---
 
-<!--
-_backgroundColor: white
-_color: black
--->
-
-<!-- _backgroundImage: "linear-gradient(to bottom, #67b8e3, #0288d1)" -->
-
-
-
-![contrast:200% bg right:40% contain](https://github.com/blauwiggle/Rechnernetze-1-Tutorium/blob/master/marp/images/06_mss.png?raw=true)
-
-## MSS - Maximum Segment Size
+# MSS - Maximum Segment Size
 - Die MSS gibt nur den Platz für den Payload im TCP/IP Paket an.
 
-## MTU - Maximum Transmission Unit
+# MTU - Maximum Transmission Unit
 - Die MTU gibt die Größe des kompletten TCP/IP Pakets an.
 
-:bulb: MTU ist die obere Grenze an maximaler Paketgröße der unteren Schichten.
+#### :bulb: MTU ist die obere Grenze an maximaler Paketgröße der unteren Schichten.
 
 ---
+
+![bg contain](https://github.com/blauwiggle/Rechnernetze-1-Tutorium/blob/master/marp/images/06_mss_mtu.png?raw=true)
 
 ---
 
 # 4. Definiere die Begriffe 
 
-## Root Name Server
-## DNS Prefetching
-## DNS Round Robin.
+# Root Name Server
+# DNS Prefetching
+# DNS Round Robin
+
+---
+
+# Root Name Server
+
+- Domain Name System (DNS) Server ..
+- .. für die Top Level Domain (TLD) Namensauflösung (`.de`, `.com`, `.io`, `.org`, ...)
+    - :bulb: DNS übersetzt den Namen einer Webseite in eine IP Adresse (`de.wikipedia.org`)
+
+Die Root Name Server kennen `.org` und wissen wo die DNS Server für die *Second Level Domain* `wikipedia` und schauen dann bei den nächsten Hierarchiestufe nach.
+
+
+**Heise Artikel** - [Hyperlocal: Wenn die DNS-Root-Zone zu Hause steht](https://www.heise.de/newsticker/meldung/Hyperlocal-Wenn-die-DNS-Root-Zone-zu-Hause-steht-4215364.html)
+
+---
+
+# DNS Prefetching
+
+## Links auf Webseiten werden schon mit DNS aufgelöst.
+
+Eine IP einer verlinkten Seite ist bereits geladen, wenn ein Benutzer darauf tippt.
+
+    <html>
+        <head>
+            <\!-- Amazon S3 -->
+            <link rel="dns-prefetch" href="//s3.amazonaws.com">
+        </head>
+    </html>
+
+---
+
+# DNS Round Robin
+
+## Lastverteilung für Netzwerkdienste per DNS.
+
+- einer Domain werden mehrere IP Adressen zugewiesen
+- wird der Name vom Resolver abgefragt, werden mehrere bekannte IP Adressen in wechselnder Reihenfolge zurück geliefert
 
 ---
 
 # 5. Erläutere den Aufbau des TCP Rahmens und die Funktion der einzelnen Felder.
+
+---
+
+![bg](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/TCP_Header.svg/1393px-TCP_Header.svg.png)
+
+---
+
+# Funktionen der einzelnen Felder
+
+Source Port
+> Port auf der Senderseite
+
+Destination Port
+> Port an den Informationen weitergeleitet werden sollen
+
+Sequence Number
+> Reihenfolge der Datenpakete
+
+Acknowledgment Number
+> Bestätigung fehlerfrei empfangener TCP Datenpakete
+
+---
+
+Data Offset
+> Zeige auf den Beginn des Payload
+> Länge des Header
+
+Reserved
+> Reserviert für zukünftige Verwendungen
+
+Control Flags
+> SYN, ACK, FIN, RST, URG, PSH
+
+Window Size
+> gibt an wie viele Bytes der Sender unbestätigt senden darf
+
+---
+
+Checksum
+> Prüfsummenbildung zur Fehlererkennung
+
+Urgent Pointer
+> Zeiger zur Lokalisierung wichtiger Daten (Priorisierung)
+
+Options
+> enthälter Zusatzinformationen
+
+data
+> der eigentliche Payload 
 
 ---
 
@@ -179,6 +256,66 @@ _color: black
 ## ISN
 ## Sliding Window
 ## Piggybacking
+
+---
+
+# Port
+
+Wird für die Kennzeichnung von Diensten und Protokollen verwendet.
+
+**Well Known Ports** (0 bis 1023) sind für Dienste reserviert
+- 21 FTP, 22 SSH, 80 HTTP, 443 TLS
+
+**Regisered Ports** (1024 bis 49151) sind für Anwendungen standardisiert
+- 1194 OpenVPN
+
+**Dynamic Ports** (49152 bis 65535) für eingehende Verbindungen
+
+# Socket
+
+Kombination aus IP Adresse und Port.
+
+---
+
+![bg](https://www.zerodayclothing.com/products/longstoryshort2/longstoryshort2_showcase_design.jpg)
+
+---
+
+# Three Way Handshake
+## Verbindungsaufbau
+
+1. Client sendet SYN
+2. Server bestätigt mit ACK und sendet ebenfalls SYN
+3. Client bestätigt mit ACK
+
+![bg right:50% fit](https://i.pinimg.com/564x/46/4f/de/464fde803728077a4d087c24916611a1.jpg)
+
+---
+
+# ISN - Initial Sequence Number
+
+- zufällig gewählte Zahl, die die erste SEQ Nummer ist
+- ist auf beiden Seiten der Verbindung bekannt
+- wenn das SYN Flag gesetzt ist, wird die ISN benötigt
+
+## Warum verwendet man eine Zufallszahl?
+- Damit die Verbindung nicht einfach so übernommen werden kann
+- Verbesserung der Sicherheit
+
+---
+
+# Sliding Window
+
+## Dient der Datenflusssteuerung um einen Datenstau beim Empfänger zu verhindern.
+
+- Kleine Fenster eher bei Echtzeit Anwendungen
+- Große Fenster ermöglichen einen höheren Datendurchsatz bei der Übertragung
+
+---
+
+# Piggybacking
+
+## Anstatt das ACK Frame einzeln zu senden, wird es vom Payload eines Datenpakets gleich mitgenommen.
 
 ---
 
@@ -237,6 +374,24 @@ Lass uns mal eine Tabelle füllen.
 ---
 
 # 10. Erläutere das in der Vorlesung vorgestellte TCP Zustanddiagramm.
+
+---
+
+![bg fit](https://github.com/blauwiggle/Rechnernetze-1-Tutorium/blob/master/marp/images/06_diagramm.png?raw=true)
+
+---
+
+- **CLOSED**: Startzustand
+- **LISTEN**: Server wartet auf Verbindungswünsche
+- **SYN-RCVD**: Server hat Verbindungswunsch empfangen
+- **SYN-SENT**: Client hat Verbindungsaufbau gestartet
+- **ESTABLISHED**: Verbindung ist etabliert und betriebsbereit
+- **FIN-WAIT-1**: Server/Client hat den Verbindungsabbau eingeleitet
+- **FIN-WAIT-2**: Client/Server hat den Verbindungsabbau bestätigt
+- **TIMED-WAIT**: Warten bis alle Segmente verschwunden sind
+- **CLOSING**: Endpunkte beenden die Verbindung gleichzeitig
+- **CLOSE-WAIT**: Entferntes System hat einen Verbindungsabbau gestartet
+- **LAST-ACK**: Warten bis alle Segmente verschwunden sind
 
 ---
 
