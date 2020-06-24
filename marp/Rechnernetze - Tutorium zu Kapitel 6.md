@@ -4,6 +4,7 @@ theme: default #uncover #gaia #default
 class: invert
 paginate: true
 headingDivider: true
+inlineSVG: true
 footer: 'HdM Stuttgart - Rechnernetze - Tutorium | Copyright © Michael Vanhee, mv068@hdm-stuttgart.de, 2020'
 ---
 
@@ -51,6 +52,8 @@ Das Paket ist für den nachfolgenden Übertragungsweg zu lang, daher wird fragme
 
 Dabei übernimmt jedes Fragment den IP Header.
 
+> ###### Bild Quelle: http://www.cfd.tu-berlin.de/Lehre/EDV2/tcpip/kap_2_3.html
+
 ---
 
 # Wer fragmentiert warum und wie?
@@ -85,11 +88,13 @@ Dabei übernimmt jedes Fragment den IP Header.
 - großer Adressraum
     - IPv6 $2^{128} = 340.282.366.900.000.000.000.000.000.000.000.000.000$ (Sextillionen)
     - IPv4 $2^{32} = 4.294.967.296$
-- NAT hat ausgediehnt
+- NAT von IPv4 hat ausgedient
+    - es gibt jedoch auch NAT6
 - Privacy Extensions
 - keine IP Klassen
 - einfacher Protokollaufbau (Performance)
 - verbesserte Sicherheit (Authentifizierung und Verschlüsselung)
+- bereit für zukünftige Erweiterungen durch das Prinzip des Next Header
 
 ---
 
@@ -147,7 +152,9 @@ Ein kompletter Umstieg bedeutet hohe Kosten.
 
 ---
 
-![bg contain](https://github.com/blauwiggle/Rechnernetze-1-Tutorium/blob/master/marp/images/06_mss_mtu.png?raw=true)
+![bg left:70% fit](https://github.com/blauwiggle/Rechnernetze-1-Tutorium/blob/master/marp/images/06_mtu_mss.jpg?raw=true)
+
+> ###### Bild Quelle: https://www.elektronik-kompendium.de/sites/net/0812211.htm
 
 ---
 
@@ -161,12 +168,11 @@ Ein kompletter Umstieg bedeutet hohe Kosten.
 
 # Root Name Server
 
-- Domain Name System (DNS) Server ..
-- .. für die Top Level Domain (TLD) Namensauflösung (`.de`, `.com`, `.io`, `.org`, ...)
+- Die Domain Name System (DNS) Root Name Server ..
+- .. sind für die Top Level Domain (TLD) Namensauflösung (`.de`, `.com`, `.io`, `.org`, ...) zuständig.
     - :bulb: DNS übersetzt den Namen einer Webseite in eine IP Adresse (`de.wikipedia.org`)
 
-Die Root Name Server kennen `.org` und wissen wo die DNS Server für die *Second Level Domain* `wikipedia` und schauen dann bei den nächsten Hierarchiestufe nach.
-
+Die Root Name Server kennen `.org` und wissen wo die DNS Server für die *Second Level Domain* `wikipedia` sind und schauen dann bei der nächsten Hierarchiestufe nach.
 
 **Heise Artikel** - [Hyperlocal: Wenn die DNS-Root-Zone zu Hause steht](https://www.heise.de/newsticker/meldung/Hyperlocal-Wenn-die-DNS-Root-Zone-zu-Hause-steht-4215364.html)
 
@@ -264,12 +270,12 @@ data
 Wird für die Kennzeichnung von Diensten und Protokollen verwendet.
 
 **Well Known Ports** (0 bis 1023) sind für Dienste reserviert
-- 21 FTP, 22 SSH, 80 HTTP, 443 TLS
+- 21 FTP, 22 SSH, 80 HTTP, 443 HTTP über TLS
 
 **Regisered Ports** (1024 bis 49151) sind für Anwendungen standardisiert
-- 1194 OpenVPN
+- 1194 OpenVPN, 5060 SIP, 8087 Kaspersky
 
-**Dynamic Ports** (49152 bis 65535) für eingehende Verbindungen
+**Dynamic Ports** (49152 bis 65535) für ausgehende Verbindungen
 
 # Socket
 
@@ -289,6 +295,8 @@ Kombination aus IP Adresse und Port.
 3. Client bestätigt mit ACK
 
 ![bg right:50% fit](https://i.pinimg.com/564x/46/4f/de/464fde803728077a4d087c24916611a1.jpg)
+
+> ###### Bild Quelle: https://www.pinterest.de/pin/9710955419313046/
 
 ---
 
