@@ -6,7 +6,7 @@ schön das du hier bist. Du musst hier nur noch die Folien herunterladen und dan
 
 ## Download
 
-Hier finden sich alle Folien als PDF: [GitHub Releases](https://github.comblauwiggle/Rechnernetze-1-Tutorium/releases).
+Hier finden sich alle Folien als PDF und HTML: [GitHub Releases](https://github.comblauwiggle/Rechnernetze-1-Tutorium/releases).
 
 ## Wie kann ich an den Folien mitarbeiten?
 

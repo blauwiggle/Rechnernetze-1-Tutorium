@@ -8,17 +8,15 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Set up node
-        uses: actions/setup-node@v1
-        with:
-          node-version: "12"
-      - name: Install marp
-        run: npm i -g @marp-team/marp-cli
+      - name: Setup env
+        run: mkdir -p staging && chmod 777 marp && chmod 777 staging
+      - name: Build HTML
+        run: docker run --rm -v $PWD:/home/marp/app/ -e LANG=$LANG marpteam/marp-cli -I marp -o staging
       - name: Build PDFs
-        run: marp --pdf marp
+        run: docker run --rm -v $PWD:/home/marp/app/ -e LANG=$LANG marpteam/marp-cli -I marp -o staging --pdf
       - uses: actions/upload-artifact@v1
         with:
-          name: PDF
+          name: PDFs-and-HTML
           path: staging
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
@@ -27,3 +25,9 @@ jobs:
           automatic_release_tag: latest-pdfs
           files: |
             staging/*
+      - uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: staging
+          CLEAN: trueh
