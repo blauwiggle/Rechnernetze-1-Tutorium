@@ -1,0 +1,29 @@
+name: marp CI
+
+on: [push]
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "12"
+      - name: Install marp
+        run: npm i -g @marp-team/marp-cli
+      - name: Build PDFs
+        run: marp --pdf marp
+      - uses: actions/upload-artifact@v1
+        with:
+          name: PDF
+          path: staging
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          prerelease: true
+          automatic_release_tag: latest-pdfs
+          files: |
+            staging/*
