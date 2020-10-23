@@ -9,11 +9,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Setup env
-        run: mkdir -p staging && chmod 777 marp && chmod 777 staging
+        run: mkdir -p build && chmod 777 marp && chmod 777 build
       - name: Build HTML
-        run: docker run --rm -v $PWD:/home/marp/app/ -e LANG=$LANG marpteam/marp-cli -I marp -o staging
+        run: docker run --rm -v $PWD:/home/marp/app/ -e LANG=$LANG marpteam/marp-cli -I marp -o build
       - name: Build PDFs
-        run: docker run --rm -v $PWD:/home/marp/app/ -e LANG=$LANG marpteam/marp-cli -I marp -o staging --pdf
+        run: docker run --rm -v $PWD:/home/marp/app/ -e LANG=$LANG marpteam/marp-cli -I marp -o build --pdf
+      - name: Create ZIP
+        run: mkdir -p staging && zip staging/slides.zip build/*
       - uses: actions/upload-artifact@v1
         with:
           name: PDFs-and-HTML
@@ -25,9 +27,3 @@ jobs:
           automatic_release_tag: latest-pdfs
           files: |
             staging/*
-      - uses: JamesIves/github-pages-deploy-action@3.7.1
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: staging
-          CLEAN: trueh
