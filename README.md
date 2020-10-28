@@ -8,9 +8,11 @@ schön das du hier bist. Du musst hier nur noch die Folien herunterladen und dan
 
 Hier finden sich alle Folien als PDF und HTML: [GitHub Releases](https://github.com/blauwiggle/Rechnernetze-1-Tutorium/releases).
 
-## Wie kann ich an den Folien mitarbeiten?
+## Git was?
 
 Du weißt nicht wie das geht? Genau jetzt ist der richtige Zeitpunkt gekommen, um dich mit git vertraut zu machen :octocat:. Schau mal hier, es ist wirklich einfach: [git - Der einfache Einstieg - eine einfache Anleitung, um git zu lernen. Kein Schnick-Schnack ;)](https://rogerdudler.github.io/git-guide/index.de.html)
+
+## tl;dr
 
 1. Terminal öffnen
 2. `git clone https://github.com/blauwiggle/Rechnernetze-1-Tutorium.git`
