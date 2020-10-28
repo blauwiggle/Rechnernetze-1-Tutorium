@@ -4,12 +4,14 @@ theme: default #uncover #gaia #default
 class: invert
 paginate: true
 headingDivider: true
-footer: 'HdM Stuttgart - Rechnernetze - Tutorium | Copyright © Michael Vanhee, mv068@hdm-stuttgart.de, Mai 2020'
+footer: 'HdM Stuttgart - Rechnernetze - Tutorium | Copyright © Michael Vanhee, mv068@hdm-stuttgart.de, 2020'
 ---
 
 # Rechnernetze - Tutorium
 # zu Kapitel 3
-## 20. Mai 2020
+
+Link zu den Folien :arrow_down: 
+https://github.com/blauwiggle/Rechnernetze-1-Tutorium
 
 ---
 
@@ -119,7 +121,7 @@ By Bystander - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php
 
 ## Zeit Multiplex
 - Signale werden zeitversertzt übertragen.
-    - In der Ponyhof Schulklasse hat nur ein Sprecher gleichzeitig das Wort (asynchron). Auf der Google I/O hat jeder Redner einen Zeitslot bestimmter Länge (syncrhon)
+    - In der Ponyhof Schulklasse hat nur ein Sprecher gleichzeitig das Wort (asynchron). Auf der Google I/O hat jeder Redner einen Zeitslot bestimmter Länge (synchron).
 
 ---
 
@@ -201,9 +203,9 @@ Wenn mehrere Stationen gleichzeitig senden, erkennen sie die Kollision
 
 # :fire: Formel - Zeitraum für die Kollisionserkennung
 
-# $t_{frame}$ = $\frac{n[bit]}{b[\frac{bit}{s}]}$
+# $t_{frame}$ = $\frac{n\: [bit]}{b\: [\frac{bit}{s}]}$
 
-# $t_{frame}$ = $\frac{(64 * 8) bit}{10*10^6\frac{bit}{s}}$ = 51,2 µs
+# $t_{frame}$ = $\frac{(64 * 8)\: bit}{10*10^6\frac{bit}{s}} = 51,2\: µs$
 
 ## Das bedeutet, dass innerhalb von 51,2 µs die Kollision bei 10 MBit / Sekunde und einer Frame Größe von 64 Byte erkannt werden muss.
 
@@ -341,44 +343,38 @@ Von Stefan Schmidt - Enhancement of Manchester Encoding, Gemeinfrei, https://com
 
 # Paketlänge
 
-## Umwandlung in Bit
-`10 * (Mbit / Sekunde) = 10.000.000 Bit / Sekunde`
+## ${Umwandlung\:in\:Bit}$ = $\frac{10\:Mbit}{Sekunde}$ = $\frac{10.000.000\:Bit}{Sekunde}$
 
 ---
 
 # Paketlänge (mit Präambel und Interframe Gap)
-## Kleinster Payload
-`8 + 14 + 46 + 4 + 12 Byte = 84 Byte`
 
-## Größter Payload
-`8 + 14 + 1500 + 4 + 12 Byte = 1538 Byte`
+## ${Kleinster\: Payload}$ = $8 + 14 + 46 + 4 + 12$ = $84 \: byte$
+
+## ${Größter\: Payload}$ = $8 + 14 + 1500 + 4 + 12$ = $1538 \: byte$
 
 ---
 
 # Umwandlung der Paketlänge in Bit
 
-`84 Byte * 8 = 672 bit`
-`1538 Byte * 8 = 12304 bit`
+## $84 \: byte * 8 = 672 \: bit$
+## $1538 \: byte * 8 = 12304 \: bit$
 
 ---
 
-# Rahmen pro Sekunde und Datendurchsatz
+# Rahmen pro Sekunde und Datendurchsatz bei 10 Mbit / Sekunde
 
-## Kleinster Payload
+## ${Kleinster\:Payload}$ = $\frac{10.000.000\:bit}{672\:bit}$ = $\frac{14.881\:Rahmen}{Sekunde}$
 
-`10.000.000 (Bit pro Sekunde) / 672 Bit = 14.881 Rahmen pro Sekunde`
-
-## Größter Payload
-
-`10.000.000 (Bit pro Sekunde) / 12.304 Bit = 813 Rahmen pro Sekunde`
+## ${Größter\:Payload}$ = $\frac{10.000.000\:bit}{12.304\:bit}$ = $\frac{813\:Rahmen}{Sekunde}$
 
 ---
 
 # Datendurchsatz
 
-`14.881 * 1/8 * 46 Byte = 684.625 Byte pro Sekunde`
+## ${Kleinster\:Payload}$ = $\frac{14.881 * 46\:byte}{8\: (zurück \:zu \:byte)}$ = $\frac{684.625\:byte}{Sekunde}$
 
-`813 * 1/8 * 1500 Byte = 1.219.500 Byte pro Sekunde`
+## ${Größter\:Payload}$ = $\frac{813 * 1500\:byte}{8}$ = $\frac{1.219.500\:byte}{Sekunde}$
 
 ---
 

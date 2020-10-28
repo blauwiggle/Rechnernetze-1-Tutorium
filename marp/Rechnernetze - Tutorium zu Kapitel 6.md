@@ -10,7 +10,6 @@ footer: 'HdM Stuttgart - Rechnernetze - Tutorium | Copyright © Michael Vanhee, 
 
 # Rechnernetze - Tutorium
 # zu Kapitel 6
-## 08. Juli 2020
 
 Link zu den Folien :arrow_down: 
 https://github.com/blauwiggle/Rechnernetze-1-Tutorium

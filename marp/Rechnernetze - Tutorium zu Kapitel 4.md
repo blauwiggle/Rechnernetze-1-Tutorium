@@ -4,12 +4,14 @@ theme: default #uncover #gaia #default
 class: invert
 paginate: true
 headingDivider: true
-footer: 'HdM Stuttgart - Rechnernetze - Tutorium | Copyright © Michael Vanhee, mv068@hdm-stuttgart.de, Mai 2020'
+footer: 'HdM Stuttgart - Rechnernetze - Tutorium | Copyright © Michael Vanhee, mv068@hdm-stuttgart.de, 2020'
 ---
 
 # Rechnernetze - Tutorium
 # zu Kapitel 4
-## 27. Mai 2020
+
+Link zu den Folien :arrow_down: 
+https://github.com/blauwiggle/Rechnernetze-1-Tutorium
 
 ---
 
@@ -22,10 +24,6 @@ footer: 'HdM Stuttgart - Rechnernetze - Tutorium | Copyright © Michael Vanhee, 
 ---
 
 6. Erläutere die Begriffe **_Metrik_** und **_Autonomes System_**. Was versteht man unter **_Peering_**? Wozu benötigt man einen **_CIX_**?
-7. Fünf Rechner names **_Alice, Bob, Eve, Mallory_** und **_Trent_** sind über drei Ethernet Segmente **_Dijkstra's, Routing, Loops_** mithilfe eines **_Repeaters R_** und einer **_Bridge B_** miteinander verbunden. Welcher Rechner erhält (auf Layer 2) **_welchen Frame_**, wenn die Stationen in der angegebenen Reihenfolge senden?
-    - Alice sendet Broadcast Frames an Bob :arrow_right: Bob sendet an Mallory :arrow_right: Eve sendet an Mallory :arrow_right: Mallory sendet Broadcast Frames
-    - Was macht Trent?
-8. Markiere die **_Kollisions-_** und **_Broadcastdomänen_**.
 
 ---
 
@@ -405,25 +403,6 @@ https://www.heise.de/newsticker/meldung/IT-Sicherheit-Bundestag-erlaubt-Deep-Pac
 - höhere Stabilität des Internets
 - Ümleitung über andere Provider Netze möglich
 - Kostengünstiger und schneller Datenverkehr
-
----
-
-# 7. Fünf Rechner names **_Alice, Bob, Eve, Mallory_** und **_Trent_** sind über drei Ethernet Segmente **_Dijkstra's, Routing, Loops_** mithilfe eines **_Repeaters R_** und einer **_Bridge B_** miteinander verbunden. Welcher Rechner erhält (auf Layer 2) **_welchen Frame_**, wenn die Stationen in der angegebenen Reihenfolge senden?
-
-- Alice sendet Broadcast Frames an Bob :arrow_right: Bob sendet an Mallory :arrow_right: Eve sendet an Mallory :arrow_right: Mallory sendet Broadcast Frames
-- Was macht Trent?
-
----
-
-# TODO
-
----
-
-# 8. Markiere die **_Kollisions-_** und **_Broadcastdomänen_**.
-
----
-
-# TODO
 
 ---
 

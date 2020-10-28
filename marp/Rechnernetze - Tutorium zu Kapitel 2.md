@@ -4,13 +4,15 @@ theme: default #uncover #gaia #default
 class: invert
 paginate: true
 headingDivider: true
-footer: 'HdM Stuttgart - Rechnernetze - Tutorium | Copyright © Michael Vanhee, mv068@hdm-stuttgart.de, Mai 2020'
+footer: 'HdM Stuttgart - Rechnernetze - Tutorium | Copyright © Michael Vanhee, mv068@hdm-stuttgart.de, 2020'
 
 ---
 
 # Rechnernetze - Tutorium
 # zu Kapitel 2
-## 13. Mai 2020
+
+Link zu den Folien :arrow_down: 
+https://github.com/blauwiggle/Rechnernetze-1-Tutorium
 
 ---
 
@@ -166,13 +168,13 @@ Schau dir vorab verschiedene Stecker Typen im Bereich der Netzwerktechnik an, wi
 
 Es ist ein wichtiger Kennwert bei Multimodefasern, da er zusätzlich neben der Dämpfung zu berücksichtigen ist. Dabei berechnet der Wert sich auf der maximalen Bandbreite und Länge des LWL. Bei Monomodefasern verzichtet man darauf, da diese in der Regel eine hohe Qualität besitzen.
 
-> B`= Bandbreite * Länge (Einheit MHz * Kilometer)
+# ${BLP}$ = ${Bandbreite * Länge}$
 
 Doch was heißt das jetzt genau?
 
 ---
 
-## Das Bandbreite-Längenprodukt von 1.200 Mhz * 1.000m ist 1200 MHz / kM.
+# ${BLP}$ = ${1.200\: MHz * 1.000m}$ ist 1.200 MHz / Kilometer
 
 ---
 
@@ -214,7 +216,6 @@ Von Speed-vs-length.svg: Alexander.stohrderivative work: Biktora (talk) - Speed-
 
 ## Dense Wavelength Division Multiplex
 
-
 > Nerd Wissen
 
 Das steht für Dichte Wellenlängen-Multiplex und gilt als zurzeit leistungsstärkste Variante der Übertragung. Durch die stabilisierten Laser (thermostatierte [DFB-Laserdioden](https://de.wikipedia.org/wiki/Distributed_Feedback_Laser)) und hochwertigen Filter, sind Übertragungsraten bis zu 100 Gbit / Sekunde pro Kanal bei bis zu 80 Kanälen möglich. Durch Kombination der verschiedenen Lichtbänder, sind bis zu 160 Kanäle möglich. Dabei sind alle 200 Kilometer Verstärker und alle 2.000 Kilometer elektrische Daten-Regeneratoren notwendig.
@@ -226,6 +227,7 @@ Das steht für Dichte Wellenlängen-Multiplex und gilt als zurzeit leistungsstä
 ---
 
 ## Frequenz Multiplex
+> Multiplexing wwerden wir im Tutorium zu Kapitel 3 durchgehen.
 
 ---
 
@@ -311,6 +313,10 @@ Von Deadlyhappen - Eigenes Werk, CC BY-SA 3.0, https://commons.wikimedia.org/w/i
 ## Monomodefaser
 
 ---
+
+# Weitere Fragen?
+
+Bitte per E-Mail an [mv068@hdm-stuttgart.de](mailto:mv068@hdm-stuttgart.de) oder auf GitHub direkt.
 
 # Bis nächste Woche :smile:
 

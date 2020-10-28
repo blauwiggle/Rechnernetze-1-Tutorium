@@ -5,14 +5,16 @@ class: invert
 paginate: true
 marp: true
 headingDivider: true
-footer: 'HdM Stuttgart - Rechnernetze - Tutorium | Copyright © Michael Vanhee, mv068@hdm-stuttgart.de, Mai 2020'
+footer: 'HdM Stuttgart - Rechnernetze - Tutorium | Copyright © Michael Vanhee, mv068@hdm-stuttgart.de, 2020'
 
 ---
 
 # Rechnernetze - Tutorium
 # zu Kapitel 1
     Supplement Update
-## 13.Mai 2020
+
+Link zu den Folien :arrow_down: 
+https://github.com/blauwiggle/Rechnernetze-1-Tutorium
 
 ---
 
