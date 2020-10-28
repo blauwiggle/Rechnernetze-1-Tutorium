@@ -15,7 +15,7 @@ jobs:
       - name: Build PDFs
         run: docker run --rm -v $PWD:/home/marp/app/ -e LANG=$LANG marpteam/marp-cli -I marp -o build --pdf
       - name: Create ZIP
-        run: mkdir -p staging && zip staging/slides.zip build/*
+        run: mkdir -p staging && zip staging/rechnernetze_tutorium.zip build/*
       - uses: actions/upload-artifact@v1
         with:
           name: PDFs-and-HTML
