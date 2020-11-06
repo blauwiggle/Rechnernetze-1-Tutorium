@@ -275,9 +275,48 @@ Von Stefan Schmidt - Enhancement of Manchester Encoding, Gemeinfrei, https://com
 
 ---
 
-# PAM5 Signalcodierung
+## Carrier Extension zusammen mit ...
 
-[Quelle itwissen.info und weitere Informationen zum PAM5 Verfahren](https://www.itwissen.info/PAM5-Verfahren-PAM5-method.html)
+Frames die 64 Bytes (minimale Länge) lang sind, werden auf 512 Bytes erweitert. Bei 64 Bytes ist das Paket schon auf dem Medium und es kann keine Kollision mehr erkannt werden. Durch die Erweiterung sind Kollisionsdomänen Ausdehnungen auf 200 Meter möglich.
+
+---
+
+## ... Frame Bursting
+
+Die Performance bei kleineren Datenpaketen wird durch die Carrier Extension verschlechtert. Um das zu kompensieren, können Server, Switches und andere Ethernet Segmente mehrere solcher kleiner Datenpakete schicken, damit die Bandbreite besser ausgenutzt wird.
+
+---
+
+## Adernpaare
+
+2 adrig
+>Coaxkabel Halbduplex Geschwindigkeit bis 10 Mbit/s
+>Definierte Pausen bei CSMA/CD, jeder bekommt Zeit zum quatschen
+
+4 adrig
+>TP-Kabel Halb- / Vollduplex Geschwindigkeit bis 2x 100 Mbit/s
+>Auf 4 Adern kann man getrennt in beide Richtungen alles abwickeln
+
+8 adrig
+>TP-Kabel Vollduplex Geschwindigkeit bis 2x 1000 Mbit/s und 2x 10.000 Mbit/s
+
+Link zum nachlesen: http://www.elektronik-kompendium.de/sites/kom/0301281.htm
+
+---
+
+## PAM5 Signalcodierung
+
+| Kombination | V / Doppelader |
+|-------------|---------------:|
+| 000         |            0 V |
+| 001         |          0,5 V |
+| 010         |            1 V |
+| 011         |         -0,5 V |
+| 100         |            0 V |
+| 101         |          0,5 V |
+| 110         |           -1 V |
+| 111         |        - 0,5 V |
+
 
 ![bg right:50% 90%](https://www.itwissen.info/lex-images/pam5-codierung-mit-vier-bitkombinationen.png)
 
