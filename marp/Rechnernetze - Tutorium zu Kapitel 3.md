@@ -411,9 +411,9 @@ Link zum nachlesen: http://www.elektronik-kompendium.de/sites/kom/0301281.htm
 
 # Datendurchsatz
 
-## ${Kleinster\:Payload}$ = $\frac{14.881 * 46\:byte}{8\: (zurück \:zu \:byte)}$ = $\frac{684.625\:byte}{Sekunde}$
+## ${Kleinster\:Payload}$ = ${14.881 * 46\:byte}$ = $\frac{684.625\:byte}{Sekunde}$
 
-## ${Größter\:Payload}$ = $\frac{813 * 1500\:byte}{8}$ = $\frac{1.219.500\:byte}{Sekunde}$
+## ${Größter\:Payload}$ = ${813 * 1500\:byte}$ = $\frac{1.219.500\:byte}{Sekunde}$
 
 ---
 
