@@ -15,7 +15,7 @@ jobs:
       - name: Build PDFs
         run: docker run --rm -v $PWD:/home/marp/app/ -e LANG=$LANG marpteam/marp-cli -I marp -o build --pdf
       - name: Build HTML index
-        run: cd build && echo '<!DOCTYPE html><meta charset="utf-8"><title>Rechnernetze 1 - Tutorium</title><link rel="stylesheet" href="https://unpkg.com/marx-css/css/marx.min.css"><main><h1>Rechnernetze 1 - Tutorium</h1><ul>' > index.html && for file in *; do echo "<li><a href=\"/Rechnernetze-1-Tutorium/$file\">$file</a></li>" >> index.html; done && echo '</ul></main>' >> index.html && cd ..
+        run: cd build && echo '<!DOCTYPE html><meta charset="utf-8"><title>Rechnernetze 1 - Tutorium</title><link rel="stylesheet" href="https://unpkg.com/marx-css/css/marx.min.css"><main><h1>Rechnernetze 1 - Tutorium</h1><a href="https://github.com/blauwiggle/Rechnernetze-1-Tutorium">📟 Zum Quellcode auf GitHub</a><ul>' > index.html && for file in *; do echo "<li><a href=\"/Rechnernetze-1-Tutorium/$file\">$file</a></li>" >> index.html; done && echo '</ul></main>' >> index.html && cd ..
       - name: Create ZIP
         run: mkdir -p staging && zip staging/rechnernetze_tutorium.zip build/*
       - uses: actions/upload-artifact@v1
