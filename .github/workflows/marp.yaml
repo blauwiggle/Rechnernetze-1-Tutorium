@@ -14,6 +14,8 @@ jobs:
         run: docker run --rm -v $PWD:/home/marp/app/ -e LANG=$LANG marpteam/marp-cli -I marp -o build
       - name: Build PDFs
         run: docker run --rm -v $PWD:/home/marp/app/ -e LANG=$LANG marpteam/marp-cli -I marp -o build --pdf
+      - name: Build HTML index
+        run: cd build && echo '<!DOCTYPE html><meta charset="utf-8"><title>Rechnernetze 1 - Tutorium</title><ul>' > index.html && for file in *; do echo "<a href=\"/Rechnernetze-1-Tutorium/$file\">$file</a>" >> index.html; done && echo '</ul>' >> index.html && cd ..
       - name: Create ZIP
         run: mkdir -p staging && zip staging/rechnernetze_tutorium.zip build/*
       - uses: actions/upload-artifact@v1
@@ -27,3 +29,11 @@ jobs:
           automatic_release_tag: latest-pdfs
           files: |
             staging/*
+      - name: Deploy to GitHub pages
+        if: ${{ github.ref == 'refs/heads/master' }}
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: build
+          CLEAN: true
