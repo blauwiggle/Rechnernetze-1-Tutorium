@@ -23,6 +23,7 @@ jobs:
           name: PDFs-and-HTML
           path: staging
       - uses: "marvinpinto/action-automatic-releases@latest"
+        if: ${{ github.ref == 'refs/heads/master' }}
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           prerelease: true
