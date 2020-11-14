@@ -2,11 +2,11 @@
 
 Hallo,
 
-schön das du hier bist. Du musst hier nur noch die Folien herunterladen und dann kann es auch schon los gehen.
+schön das du hier bist. Die aktuellen Folien finden sich immer hier: [blauwiggle.github.io/Rechnernetze-1-Tutorium](https://blauwiggle.github.io/Rechnernetze-1-Tutorium).
 
 ## Download
 
-Hier finden sich alle Folien als PDF und HTML: [GitHub Releases](https://github.com/blauwiggle/Rechnernetze-1-Tutorium/releases).
+Zum Download finden sich hier auch alle Folien (PDF und HTML) als ZIP-Archiv: [GitHub Releases](https://github.com/blauwiggle/Rechnernetze-1-Tutorium/releases).
 
 ## Git was?
 
