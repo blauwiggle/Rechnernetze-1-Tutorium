@@ -4,6 +4,10 @@ Hallo,
 
 schön das du hier bist. Die aktuellen Folien finden sich immer hier: [blauwiggle.github.io/Rechnernetze-1-Tutorium](https://blauwiggle.github.io/Rechnernetze-1-Tutorium).
 
+## Pages
+
+[Pages Link](https://blauwiggle.github.io/Rechnernetze-1-Tutorium/)
+
 ## Download
 
 Zum Download finden sich hier auch alle Folien (PDF und HTML) als ZIP-Archiv: [GitHub Releases](https://github.com/blauwiggle/Rechnernetze-1-Tutorium/releases).
