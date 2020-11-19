@@ -26,7 +26,7 @@ gegenseitig beeinflussen.
 
 6. Erläuter die Begriffe **_Flow Control_** und **_Link Aggregation_**.
 7. Metro Ethernet, ein großes aktuelles Thema in den Carrier Netzen. Beurteile die Eignung von Ethernet in Metro Netzen.
-8. Ethernet Frames (10 MBit/s Ethernet) sollen mit Hilfe eines Protokoll Sniffers (z.B. dem in der Vorlesung eingesetzten Wireshark) *eingefangen* und ausgewertet werden. Wie viele Rahmen pro Sekunde sind maximal zu erwarten? Berechne die Rahmenrate einer Station in Abhängigkeit von der Größe der Payload (kleinster und größter Wert der Payload-Länge). Berechne auch den eigentlichen Datendurchsatz (ab Layer 3).
+8. Ethernet Frames (10 MBit/s Ethernet) sollen mit Hilfe eines Protokoll Sniffers (z.B. dem in der Vorlesung eingesetzten Kabelhai) *eingefangen* und ausgewertet werden. Wie viele Rahmen pro Sekunde sind maximal zu erwarten? Berechne die Rahmenrate einer Station in Abhängigkeit von der Größe der Payload (kleinster und größter Wert der Payload-Länge). Berechne auch den eigentlichen Datendurchsatz (ab Layer 3).
 
 ---
 
@@ -376,7 +376,7 @@ Link zum nachlesen: http://www.elektronik-kompendium.de/sites/kom/0301281.htm
 
 ---
 
-# 8. Ethernet Frames (10 MBit/s Ethernet) sollen mit Hilfe eines Protokoll Sniffers (z.B. dem in der Vorlesung eingesetzten Wireshark) *eingefangen* und ausgewertet werden. Wie viele Rahmen pro Sekunde sind maximal zu erwarten? Berechne die Rahmenrate einer Station in Abhängigkeit von der Größe der Payload (kleinster und größter Wert der Payload-Länge). Berechne auch den eigentlichen Datendurchsatz (ab Layer 3).
+# 8. Ethernet Frames (10 MBit/s Ethernet) sollen mit Hilfe eines Protokoll Sniffers (z.B. dem in der Vorlesung eingesetzten Kabelhai) *eingefangen* und ausgewertet werden. Wie viele Rahmen pro Sekunde sind maximal zu erwarten? Berechne die Rahmenrate einer Station in Abhängigkeit von der Größe der Payload (kleinster und größter Wert der Payload-Länge). Berechne auch den eigentlichen Datendurchsatz (ab Layer 3).
 
 ---
 
