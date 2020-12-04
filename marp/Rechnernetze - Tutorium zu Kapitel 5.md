@@ -5,6 +5,8 @@ class: invert
 paginate: true
 headingDivider: true
 footer: 'HdM Stuttgart - Rechnernetze - Tutorium | Copyright © Michael Vanhee, mv068@hdm-stuttgart.de, 2020'
+auto-scaling: true
+inlineSVG: true
 ---
 
 # Rechnernetze - Tutorium
@@ -286,8 +288,8 @@ IPv6 wurde entwickelt und löst IPv4 ab. Das ändern des IPv4 TCP/IP Stacks wird
 
 ## Vorteile
 
-- Adressbereiche können besser ausgenutzt werden. Teilbereiche können durch einen CIDR Eintrag an ein anderes Unternehmen vergeben werden.
 - Routing Tabellen werden reduziert
+- Adressbereiche werden besser ausgenutzt
 
 ---
 
@@ -335,6 +337,20 @@ Von IP_Address_Match.png: Baccala@freesoft.orgderivative work: Zapyon (talk) - I
 ## Fleißig üben! 
 
 Zum Beispiel hier: http://www.eex-online.de/informatik.php bei Netzwerke auf [CIDR](http://www.eex-online.de/informatik/cidr.html) und [VLSM](http://www.eex-online.de/informatik/vlsm.html) klicken. Es generiert dir Aufgaben, zeigt dir den Lösungsweg und die Lösung auf.
+
+---
+
+# VLSM Tabelle
+
+| IPs Anzahl |  2^ | Subnetz Anzahl |     Subnetz     |             Subnetz in Binär            |  /  |
+|:----------:|:---:|:--------------:|:---------------:|:---------------------------------------:|:---:|
+|     254    | 2^0 |        1       |  255.255.255.0  | 11.. 0000 0000 | /24 |
+|     126    | 2^1 |        2       | 255.255.255.128 | 11.. 1000 0000 | /25 |
+|     62     | 2^2 |        4       | 255.255.255.192 | 11.. 1100 0000 | /26 |
+|     30     | 2^3 |        8       | 255.255.255.224 | 11.. 1110 0000 | /27 |
+|     14     | 2^4 |       16       | 255.255.255.240 | 11.. 1111 0000 | /28 |
+|      6     | 2^5 |       32       | 255.255.255.248 | 11.. 1111 1000 | /29 |
+|      2     | 2^6 |       64       | 255.255.255.252 | 11.. 1111 1100 | /30 |
 
 ---
 
