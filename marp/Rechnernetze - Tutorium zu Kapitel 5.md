@@ -201,7 +201,7 @@ Die Subnetzmaske ist nur im lokalen Netz gültig.
 
 > UPDATE :exclamation:
 > - Empfängeradresse ~~Absenderadresse~~ durch eine andere ersetzen
-> - Änderungen im IP Header, dadurch ändert sich die FCS auf Layer 2
+> - Änderungen im IP Header, dadurch ändert sich die Frame Check Sequence (FCS) auf Layer 2 .. eine Fehlerkorrektur auf, typisch mit Cyclic Redundancy Check (CRC 32 Bit)
 - Nutzung privater Adresseräume (bsp. 192.168.0.0/16)
 - Warum?
     - Sicherheit durch verstecken des internen Netz
