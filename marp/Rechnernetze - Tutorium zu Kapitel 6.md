@@ -282,7 +282,7 @@ Kombination aus IP Adresse und Port.
 
 ---
 
-![bg](https://www.zerodayclothing.com/products/longstoryshort2/longstoryshort2_showcase_design.jpg)
+![bg](https://lh3.googleusercontent.com/proxy/rUsj8A9MF9y8VBzERbJMlYXWDtX7O3Y9bOXMVVQ0lTMYCl7n5MHs3If2lFHlbvHRsGXo-YLlqRUlmwEr42MhaSQQS9pwgAPQF9zDVmPEQy_gNrwPTZN1kIOfanQeTbvASZyV1mDGbWj_yAc_kou1Z4nbpOkmYsuxi_27)
 
 ---
 
