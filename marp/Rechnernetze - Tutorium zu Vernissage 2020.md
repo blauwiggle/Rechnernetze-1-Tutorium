@@ -254,7 +254,7 @@ Geben Sie für die nachfolgende IP Adresse an.
 
 # Lösung - Broadcast Adresse bestimmen
 
-## 193.174.31.255
+## 193.174.24.191
 
 ---
 
