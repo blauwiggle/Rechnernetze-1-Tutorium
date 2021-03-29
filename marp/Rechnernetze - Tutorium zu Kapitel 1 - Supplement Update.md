@@ -1,27 +1,31 @@
 ---
-
 theme: uncover #uncover #default #gaia
 class: invert
 paginate: true
 marp: true
 headingDivider: true
-footer: 'HdM Stuttgart - Rechnernetze - Tutorium | Copyright © Michael Vanhee, mv068@hdm-stuttgart.de, 2020'
-
+footer: "HdM Stuttgart - Rechnernetze - Tutorium | Copyright © Michael Vanhee, mv068@hdm-stuttgart.de, 2021"
 ---
 
 # Rechnernetze - Tutorium
+
 # zu Kapitel 1
+
     Supplement Update
 
-Link zu den Folien :arrow_down: 
+Link zu den Folien :arrow_down:
 https://github.com/blauwiggle/Rechnernetze-1-Tutorium
 
 ---
 
+<!--footer: "" -->
+
 # Im letzten Tutorium sind Fragen aufgetaucht.
 
 ## Was ist Latenz?
+
 ## Was ist ein Hop?
+
 ## Was ist SDH/SONET?
 
 ---
@@ -51,7 +55,9 @@ Die Anzahl der Hops können mit einem **Traceroute** ermittelt werden.
 ---
 
 # SDH/SONET
+
 ## SDH (Synchrone Digitale Hierarchie) - DE
+
 ## SONET (Synchronous Optical Network) - US
 
 ---
