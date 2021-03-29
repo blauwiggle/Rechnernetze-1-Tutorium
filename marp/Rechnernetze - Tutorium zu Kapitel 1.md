@@ -134,7 +134,7 @@ https://github.com/blauwiggle/Rechnernetze-1-Tutorium
 - Aufteilung der Daten in Pakete
 - Pakete enthalten Adressinformationen
 - Freier Routenwahl der Pakete
-- Eigent sich für zeitunkritische Übertragungen und Übertragungen mit über der Zeit schwankenden Lastprofilen (bessere Ausnutzung der Übertragungskapazitäten)
+- Eignet sich für zeitunkritische Übertragungen und Übertragungen mit über der Zeit schwankenden Lastprofilen (bessere Ausnutzung der Übertragungskapazitäten)
 
 ---
 
