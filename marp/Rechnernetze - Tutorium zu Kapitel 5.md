@@ -19,7 +19,7 @@ https://github.com/blauwiggle/Rechnernetze-1-Tutorium
 
 1. Erläutere die Aufgaben und die Funktionsweise von ARP.
 2. Wie wird in einem Netz mit Hilfe von ARP verhindert, dass versehentlich eine IP doppelt vergeben wird?
-3. Beschreibe die VLAN-Idee. Welche Vor- und Nachteile siehst du bei den Einsatzmöglichkeiten? Was versteht man und VLAN Tagging (802.1q)?
+3. Beschreibe die VLAN-Idee. Welche Vor- und Nachteile siehst du bei den Einsatzmöglichkeiten? Was versteht man unter VLAN Tagging (802.1q)?
 4. Wie bestimmt man die Broadcast Adresse eines IP Gerätes? Warum muss die Subnetz Maske im Internet nicht mit übertragen werden?
 5. Erläutere NAT, PAT, Full Cone, Restricted Cone, Port Restricted Cone.
 
