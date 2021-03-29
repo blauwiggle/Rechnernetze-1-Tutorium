@@ -103,7 +103,6 @@ https://github.com/blauwiggle/Rechnernetze-1-Tutorium
 
 - Erweiterbar
 - Große Entfernungen realisierbar
-- Gut geeignet für Algorithmen
 
 ### Nachteile
 
