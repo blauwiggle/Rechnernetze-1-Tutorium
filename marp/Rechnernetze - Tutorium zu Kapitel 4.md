@@ -4,16 +4,19 @@ theme: default #uncover #gaia #default
 class: invert
 paginate: true
 headingDivider: true
-footer: 'HdM Stuttgart - Rechnernetze - Tutorium | Copyright © Michael Vanhee, mv068@hdm-stuttgart.de, 2020'
+footer: "HdM Stuttgart - Rechnernetze - Tutorium | Copyright © Michael Vanhee, mv068@hdm-stuttgart.de, 2020"
 ---
 
 # Rechnernetze - Tutorium
+
 # zu Kapitel 4
 
-Link zu den Folien :arrow_down: 
+Link zu den Folien :arrow_down:
 https://github.com/blauwiggle/Rechnernetze-1-Tutorium
 
 ---
+
+<!--footer: "" -->
 
 1. Welche Koppelelemente arbeiten auf welcher OSI-Schicht? Welche **_Veränderungen_** nimmt ein Switch an einem Rahmen vor? Benenne die Vor- und Nachteile der Netzkopplung mit Switches. Was versteht man unter einem **_Layer-7 Switch_**? Erläutere den Begriff **_Port Trunking_**.
 2. Was versteht man unter **_Spanning-Tree_**? Wie funktioniert der **_Spanning-Tree Algorithmus_** zur Beseitigung von Schleifen im Netz?
@@ -43,27 +46,29 @@ https://github.com/blauwiggle/Rechnernetze-1-Tutorium
 
 ---
 
-| Layer  	        | Repeater  	        | Hub  	            | Bridge  	        | Switch  	        | Multilayer Switch | Router  	        | Gateway  	        |
-|---	            |:---:	                |:---:	            |:---:	            |:---:	            |:---:|             :---:	            |:---:	            |
-| Application  	    |   	                |   	            |   	            |   	            |:white_check_mark: |   	            |:white_check_mark: |
-| Presentation  	|   	                |                   |   	            |   	            |:white_check_mark: |   	            |:white_check_mark: |
-| Session  	        |   	                |   	            |   	            |   	            |:white_check_mark: |   	            |:white_check_mark: |
-| Transport  	    |   	                |   	            |   	            |   	            |:white_check_mark: |   	            |:white_check_mark: |
-| Network  	        |   	                |   	            |   	            |   	            |:white_check_mark: |:white_check_mark: |:white_check_mark: |
-| Data Link  	    |   	                |   	            |:white_check_mark: |:white_check_mark: |:white_check_mark: |:white_check_mark: |:white_check_mark: |
-| Physical Layer  	|:white_check_mark:  	|:white_check_mark: |:white_check_mark: |:white_check_mark: |:white_check_mark: |:white_check_mark: |:white_check_mark: |
+| Layer          |      Repeater      |        Hub         |       Bridge       |       Switch       | Multilayer Switch  |       Router       |      Gateway       |
+| -------------- | :----------------: | :----------------: | :----------------: | :----------------: | :----------------: | :----------------: | :----------------: |
+| Application    |                    |                    |                    |                    | :white_check_mark: |                    | :white_check_mark: |
+| Presentation   |                    |                    |                    |                    | :white_check_mark: |                    | :white_check_mark: |
+| Session        |                    |                    |                    |                    | :white_check_mark: |                    | :white_check_mark: |
+| Transport      |                    |                    |                    |                    | :white_check_mark: |                    | :white_check_mark: |
+| Network        |                    |                    |                    |                    | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Data Link      |                    |                    | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Physical Layer | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
 ---
 
 # Repeater - OSI-Layer 1
+
 - empfängt das Signal und sendet es in aufbereiteter Form weiter
 
 ---
 
 # Hub - OSI-Layer 1
+
 - keine Trennung der Kollisionsdomäne
-    - Physikalisch ist es eine Sterntopologie
-    - logisch ist es ein Bus
+  - Physikalisch ist es eine Sterntopologie
+  - logisch ist es ein Bus
 - Multiport Repeater
 - sendet ein Signal an alle Ports weiter
 - veraltet und wird fast nicht mehr eingesetzt
@@ -71,6 +76,7 @@ https://github.com/blauwiggle/Rechnernetze-1-Tutorium
 ---
 
 # Switch - OSI-Layer 2
+
 - trennt Kollisionsdomänen
 - treffen Weiterleitungsentscheidungen (FORWARD) anhand selbst gelernter MAC-Adressen (Source-Address-Table, SAT)
 - SAT, besteht aus der MAC-Adresse und dem physikalischen Port (wo das Kabel drin steckt)
@@ -78,6 +84,7 @@ https://github.com/blauwiggle/Rechnernetze-1-Tutorium
 ---
 
 # Bridge - OSI-Layer 2
+
 - gleiches Funktionsprinzip, nur veralteter Name
 - aus Multiport Bridge wurde der bekannten Switch
 
@@ -85,22 +92,22 @@ https://github.com/blauwiggle/Rechnernetze-1-Tutorium
 
 # Switch/Bridge - Architekturen
 
-| Verfahren  	    | Beschreibung  	| Vorteile   	| Nachteile  	|
-|---	            |---	|---	|---	|
-| Cut-Through  	    | Der Switch leitet das Datenpaket sofort weiter, wenn er die Adresse des Ziels erhalten hat  	| Latenz zwischen Empfangen und Weiterleiten ist äußert gering  	| keine Erkennung fehlerhafter Datenpakete, werden trotzdem an Empfänger weitergeleitet  	|
+| Verfahren   | Beschreibung                                                                               | Vorteile                                                     | Nachteile                                                                             |
+| ----------- | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------------------------------- |
+| Cut-Through | Der Switch leitet das Datenpaket sofort weiter, wenn er die Adresse des Ziels erhalten hat | Latenz zwischen Empfangen und Weiterleiten ist äußert gering | keine Erkennung fehlerhafter Datenpakete, werden trotzdem an Empfänger weitergeleitet |
 
 ---
 
-| Verfahren  	    | Beschreibung  	| Vorteile   	| Nachteile  	|
-|---	            |---	|---	|---	|
-| Store and Forward | Gesamtes Paket wird vollständig eingelesen und nur bei Fehlerfreiheit weitergeleitet   	| Fehlerhafter Pakete werden herausgefiltert, daher gibt es vielfältige Filtermöglichkeiten  	| Relativ große Verzögerung, abhängig von der Größe  	|
+| Verfahren         | Beschreibung                                                                         | Vorteile                                                                                  | Nachteile                                         |
+| ----------------- | ------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------- | ------------------------------------------------- |
+| Store and Forward | Gesamtes Paket wird vollständig eingelesen und nur bei Fehlerfreiheit weitergeleitet | Fehlerhafter Pakete werden herausgefiltert, daher gibt es vielfältige Filtermöglichkeiten | Relativ große Verzögerung, abhängig von der Größe |
 
 ---
 
-| Verfahren  	    | Beschreibung  	| Vorteile   	| Nachteile  	|
-|---	            |---	|---	|---	|
-| Adaptive Switching| Es ist ein Mix aus Cut-Through und Store and Forward. Switch startet mit Store and Forward und schaltet bei wenigern Fehlern auf Cut Through um | sehr effizient   	| teuer   	|
-| Fragment Free  	| Der Switch liest die ersten 64 Byte des Frames ein und leitet dieses bei Fehlerfreiheit weiter   	| schnell   	| Lässt fehlerhafte Pakete (fehlerhaft nach den ersten 64 Byte) durch  	|
+| Verfahren          | Beschreibung                                                                                                                                    | Vorteile       | Nachteile                                                           |
+| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- | -------------- | ------------------------------------------------------------------- |
+| Adaptive Switching | Es ist ein Mix aus Cut-Through und Store and Forward. Switch startet mit Store and Forward und schaltet bei wenigern Fehlern auf Cut Through um | sehr effizient | teuer                                                               |
+| Fragment Free      | Der Switch liest die ersten 64 Byte des Frames ein und leitet dieses bei Fehlerfreiheit weiter                                                  | schnell        | Lässt fehlerhafte Pakete (fehlerhaft nach den ersten 64 Byte) durch |
 
 ---
 
@@ -109,11 +116,12 @@ https://github.com/blauwiggle/Rechnernetze-1-Tutorium
 Ein Router leitet anhand von Metriken Daten weiter.
 
 ## Aufgaben
+
 - Trennung von Netzsegmenten (Subnetze)
 - Aufbau und Aktualisierung der Netztopologie
 - Wegesuche
 - Fragmentierung bei IPv4 (Anpassung der Daten an max. zulässige Layer-2 Paketlänge)
-    - ***Wie hoch ist eine sehr bekannte MTU?***
+  - **_Wie hoch ist eine sehr bekannte MTU?_**
 
 ---
 
@@ -126,13 +134,15 @@ Ein Router leitet anhand von Metriken Daten weiter.
 # Gateway
 
 ## Aufgaben
+
 - Gateways konvertieren verschiedene Netzprotokolle
 - Phillips Hue Lampen ZigBee <-> WLAN
 - E-Mail zu Fax und umgekehrt
 
 ## Was ist mit dem Standard Gateway im Router?
+
 - Keine Netzwerkprotokollkonvertierung
-    - nur Weiterleitung von Nutzanfragen zwischen Subnetzen
+  - nur Weiterleitung von Nutzanfragen zwischen Subnetzen
 - Ist im Computer als Adresse des Routers hinterlegt
 
 ---
@@ -144,22 +154,25 @@ Ein Router leitet anhand von Metriken Daten weiter.
 # Switch - OSI Layer 2
 
 ## Layer 2
+
 - (fast) keine Veränderung am Rahmen
 - verwirft ggf. Pakete
 - kann VLAN-Tag an Rahmen anhängen
 
 ## Layer 3
+
 - erst ab Layer 3 werden Veränderungen an Datenpaketen vorgenommen
-    - durch Router
-    - durch IP-Fragmentierung
-    
+  - durch Router
+  - durch IP-Fragmentierung
+
 ---
 
-# Benenne die ***Vor-*** und ***Nachteile*** der Netzkopplung mit Switches.
+# Benenne die **_Vor-_** und **_Nachteile_** der Netzkopplung mit Switches.
 
 ---
 
 # Vorteile
+
 - VLAN
 - Puffer
 - Sicherheit
@@ -171,6 +184,7 @@ Ein Router leitet anhand von Metriken Daten weiter.
 ---
 
 # Nachteile
+
 - Latenz
 - Spanning Tree Protocol (STP) bei mehreren Wegen notwendig
 - Port Mirroring, aufwendige Suche benötigt
@@ -198,7 +212,7 @@ Dabei wird Switch Port A and einen weiteren Port B gespiegelt. Dabei ist Port Mi
 > Multilayer Switch
 
 - Content Switching (URL- Adresse, Cookies, ...)
-    - trifft Switching Entscheidungen auf Basis des Dateninhalts
+  - trifft Switching Entscheidungen auf Basis des Dateninhalts
 - unterstützt Deep Packet Inspection (DP)
 
 ---
@@ -227,7 +241,7 @@ Dabei wird Switch Port A and einen weiteren Port B gespiegelt. Dabei ist Port Mi
 
 ---
 
-# 2. 
+# 2.
 
 # Was versteht man unter **_Spanning-Tree_**?
 
@@ -236,14 +250,17 @@ Dabei wird Switch Port A and einen weiteren Port B gespiegelt. Dabei ist Port Mi
 ---
 
 ## Welches **Problem** soll gelöst werden?
+
 - Pakete kreisen in Endlosschleifen im Netz
 - Netzüberlastung und Ausfall der Netze
 
 ## **Warum** ist es notwendig?
+
 - Redundante Wege in größeren Netzen
 - höhere Ausfallsicherheit durch Alternativwege
 
 ## Welche **Lösung** gibt es?
+
 - Baumstruktur (Spanning Tree) aufbauen und Deaktivieren von überschüssigen Verbindungen (Spanning Tree Algorithmus)
 
 ---
@@ -259,17 +276,21 @@ Dabei wird Switch Port A and einen weiteren Port B gespiegelt. Dabei ist Port Mi
 # Port Zustände STP
 
 ## Blocked
+
 Alle Ports beginnen im Blocked Modus um Bridging Schleifen zu verhindern. Der Port bleibt im Blocked Modus, wenn STA bestimmt, dass es zur Root Bridge einen besseren Weg durch einen anderen Port gibt
 
 ---
 
 ## Listen/Learn
+
 Der Port hört nur zu, versendet oder empfängt aber keine Nutzdaten. Nachrichten von anderen Ports werden aktiv erkannt und weiter verarbeitet.
 
 ## Forward
+
 In diesem Stadum kann der Port Daten senden und empfangen. Nicht zulässig, wenn noch überflüssige Links vorhanden oder der Weg noch nicht eindeutig ist.
 
 ## Disabled
+
 Der Port ist gesperrt.
 
 ---
@@ -278,14 +299,14 @@ Der Port ist gesperrt.
 
 ---
 
-| Vorteile                            	| Nachteile                                                            	|
-|-------------------------------------	|----------------------------------------------------------------------	|
-| Filter                              	| DSGVO schwierig                                                      	|
-| Spam / Malware bekämpfe             	| Zensur                                                               	|
-| Terror- und Kriminalitätsbekämpfung 	| Diskriminierung                                                      	|
-| Überwachung von Überlastkontrollen  	| Eigennütziges Verhalten der Carrier/Provider 	|
-| Netzwerkmanagement                  	| Verletzung des Fernmeldegeheimnisses                                 	|
-| Reduzierung des Datenverkehrs       	|                                                                      	|
+| Vorteile                            | Nachteile                                    |
+| ----------------------------------- | -------------------------------------------- |
+| Filter                              | DSGVO schwierig                              |
+| Spam / Malware bekämpfe             | Zensur                                       |
+| Terror- und Kriminalitätsbekämpfung | Diskriminierung                              |
+| Überwachung von Überlastkontrollen  | Eigennütziges Verhalten der Carrier/Provider |
+| Netzwerkmanagement                  | Verletzung des Fernmeldegeheimnisses         |
+| Reduzierung des Datenverkehrs       |                                              |
 
 ---
 
@@ -302,25 +323,26 @@ https://www.heise.de/newsticker/meldung/IT-Sicherheit-Bundestag-erlaubt-Deep-Pac
 
 # 4. Wie stehst du zur **_Netzneutralität_**?
 
-## Pro - Content Provider **VS** Contra - Carrier   
+## Pro - Content Provider **VS** Contra - Carrier
 
 ---
 
-| Pro - Content Provider                                                     	| Contra - Carrier                               	|
-|---------------------------------------------------------------------------------	|-----------------------------------------------------	|
-| Chancengleichheit                                                               	| Selbstbestimmung der Carrier                        	|
-| Meinungsfreiheit                                                                	| Vermeidung von Engpässen                            	|
-| Offenes Internet                                                                	| Mehr Geld für Netzausbau                            	|
-| Kein eigennütziges Verhalten der Carrier/Provider                               	| Diversität (Vielfältigkeit) an Diensten                              	|
+| Pro - Content Provider                            | Contra - Carrier                        |
+| ------------------------------------------------- | --------------------------------------- |
+| Chancengleichheit                                 | Selbstbestimmung der Carrier            |
+| Meinungsfreiheit                                  | Vermeidung von Engpässen                |
+| Offenes Internet                                  | Mehr Geld für Netzausbau                |
+| Kein eigennütziges Verhalten der Carrier/Provider | Diversität (Vielfältigkeit) an Diensten |
 
 ---
 
-| Pro - Content Provider                                                     	| Contra - Carrier                               	|
-|---------------------------------------------------------------------------------	|-----------------------------------------------------	|
-| Keine Einschränkung/Diskriminierung :arrow_right: Zweiklassengesellschaft droht 	| Carrier generieren mehr Umsatz                      	|
-| Netzzugang, muss ein Grundrecht unserer Gesellschaft werden                     	| Erhöhung der Netzqualität und Übertragungseffizienz 	|
-| Innovationsfreudig                                                              	| Erhöhung der Ausfalltoleranz                        	|
-| Wissenszugang unabhängig von der finanziellen Situation                         	|                                                     	|
+| Pro - Content Provider                                                          | Contra - Carrier                                    |
+| ------------------------------------------------------------------------------- | --------------------------------------------------- |
+| Keine Einschränkung/Diskriminierung :arrow_right: Zweiklassengesellschaft droht | Carrier generieren mehr Umsatz                      |
+| Netzzugang, muss ein Grundrecht unserer Gesellschaft werden                     | Erhöhung der Netzqualität und Übertragungseffizienz |
+| Innovationsfreudig                                                              | Erhöhung der Ausfalltoleranz                        |
+| Wissenszugang unabhängig von der finanziellen Situation                         |                                                     |
+
 ---
 
 # 5. Zwei Stationen sind miteinander verbunden. Station 1 arbeitet mit **_Autonegotiation_** (**_Auto-sensing_**), bei Station 2 ist die **_Auto-sensing_** abgeschaltet (Duplex-Fehlanpassung). Beschreibe die Konsequenzen.
@@ -337,17 +359,18 @@ https://www.heise.de/newsticker/meldung/IT-Sicherheit-Bundestag-erlaubt-Deep-Pac
 # Autonegotiation ist abgeschaltet bei Station 2
 
 # daraus folgt :arrow_down:
+
 - Auto-sensing funktioniert nicht
 - Station 1 erkennt Geschwindigkeit von Station 2
-    - aber nicht ob Half- oder Full-Duplex
+  - aber nicht ob Half- oder Full-Duplex
 - Station 1 nimmt eine Duplex-Fehlanpassung vor und nimmt dann Half-Duplex
-    - Kommunikation ist möglich, jedoch mit sehr vielen Kollisionen
+  - Kommunikation ist möglich, jedoch mit sehr vielen Kollisionen
 
 # :exclamation: **_ineffizient_**
 
 ---
 
-# 6. 
+# 6.
 
 # Erläutere die Begriffe **_Metrik_** und **_Autonomes System_**.
 
@@ -386,6 +409,7 @@ https://www.heise.de/newsticker/meldung/IT-Sicherheit-Bundestag-erlaubt-Deep-Pac
 ## Ort des Geschehens?
 
 ## An Internetknotenpunkten (**IX**, **I**nternet e**X**change)
+
 - ist ein Peering Point
 - arbeitet nicht gewinnorientiert
 
@@ -394,12 +418,13 @@ https://www.heise.de/newsticker/meldung/IT-Sicherheit-Bundestag-erlaubt-Deep-Pac
 # **_CIX_**
 
 ## **CIX** - **C**ommercial **I**nternet e**X**change
+
 - ist ein Peering Point
 - weltweit größter steht in Frankfurt (DE-CIX)
 - weltweit über 300 CIX
 
-
 ## **Wozu** benötigt man einen CIX?
+
 - höhere Stabilität des Internets
 - Ümleitung über andere Provider Netze möglich
 - Kostengünstiger und schneller Datenverkehr
@@ -412,4 +437,4 @@ Bitte per E-Mail an [mv068@hdm-stuttgart.de](mailto:mv068@hdm-stuttgart.de) oder
 
 # Bis nächste Woche :smile:
 
-> ```git pull``` nicht vergessen
+> `git pull` nicht vergessen

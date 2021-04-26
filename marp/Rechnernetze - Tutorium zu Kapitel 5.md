@@ -4,18 +4,21 @@ theme: default #uncover #gaia #default
 class: invert
 paginate: true
 headingDivider: true
-footer: 'HdM Stuttgart - Rechnernetze - Tutorium | Copyright © Michael Vanhee, mv068@hdm-stuttgart.de, 2020'
+footer: "HdM Stuttgart - Rechnernetze - Tutorium | Copyright © Michael Vanhee, mv068@hdm-stuttgart.de, 2020"
 auto-scaling: true
 inlineSVG: true
 ---
 
 # Rechnernetze - Tutorium
+
 # zu Kapitel 5
 
-Link zu den Folien :arrow_down: 
+Link zu den Folien :arrow_down:
 https://github.com/blauwiggle/Rechnernetze-1-Tutorium
 
 ---
+
+<!--footer: "" -->
 
 1. Erläutere die Aufgaben und die Funktionsweise von ARP.
 2. Wie wird in einem Netz mit Hilfe von ARP verhindert, dass versehentlich eine IP doppelt vergeben wird?
@@ -42,22 +45,23 @@ https://github.com/blauwiggle/Rechnernetze-1-Tutorium
 12. Fasse die Routing Einträge für die nachfolgenden vier IP Adressen jeweils soweit wie möglich zusammen:
 
     1. 220.56.132/24
-    220.56.133/24
-    220.56.134/24
-    220.56.135/24
+       220.56.133/24
+       220.56.134/24
+       220.56.135/24
     2. 220.56.146.0/24
-    220.56.147.0/24
-    220.56.148.0/24
-    220.56.149.0/24
+       220.56.147.0/24
+       220.56.148.0/24
+       220.56.149.0/24
 
 ---
 
 # IP Adressierung
+
 - für die Kommunikation im Internet ist die MAC Adresse unverzichtbar
 - in die Routingtabelle steht jedoch nur die IP Adresse
 - IPs sind nicht Ortsgebunden, logische Abstraktion
-> UPDATE :exclamation: 
-> natürlich sind offizielle IP Adressen von Unternehmen schon ortsansässig
+  > UPDATE :exclamation:
+  > natürlich sind offizielle IP Adressen von Unternehmen schon ortsansässig
 
 ## Wie erkundet dann ein IP Gerät die MAC Adresse des Empfängers?
 
@@ -74,9 +78,9 @@ https://github.com/blauwiggle/Rechnernetze-1-Tutorium
 
 - ermittelt anhand einer IP Adresse die dazugehörige MAC Adresse
 - falls kein Eintrag in der ARP Tabelle vorhanden ist
-    - wird ein Broadcast (FF-FF-FF-FF-FF-FF) an alle Teilnehmer gesendet
-    - **ARP Request** mit MAC Adresse und IP Adresse des Hosts
-    - bei übereinstimmender Adresse kommt ein **ARP Reply**
+  - wird ein Broadcast (FF-FF-FF-FF-FF-FF) an alle Teilnehmer gesendet
+  - **ARP Request** mit MAC Adresse und IP Adresse des Hosts
+  - bei übereinstimmender Adresse kommt ein **ARP Reply**
 
 ---
 
@@ -91,17 +95,19 @@ https://github.com/blauwiggle/Rechnernetze-1-Tutorium
 # Gratuitous (unaufgefordertes) ARP
 
 - Host sendet ARP Request an den Broadcast
-    - bei dem er seine eigene IP als Quelle und Ziel einträgt
-    :arrow_right: :exclamation: Es darf keine Antwort kommen:exclamation:
-        - das passiert bsp. bei jedem Systemstart vom Betriebssystem
+  - bei dem er seine eigene IP als Quelle und Ziel einträgt
+    :arrow_right: :exclamation: Es darf keine Antwort kommen:exclamation: - das passiert bsp. bei jedem Systemstart vom Betriebssystem
 
 Bekommt der Host ein ARP Reply, ist die Adresse bereits vergeben. Bekommt er kein ARP Reply, war die Vergabe der IP Adresse erfolgreich.
 
 ---
 
-# 3. 
+# 3.
+
 # Beschreibe die VLAN Idee.
+
 # Welche Vor- und Nachteile siehst du bei den Einsatzmöglichkeiten?
+
 # Was versteht man unter VLAN Tagging (802.1q)?
 
 ---
@@ -109,7 +115,7 @@ Bekommt der Host ein ARP Reply, ist die Adresse bereits vergeben. Bekommt er kei
 # VLAN Idee
 
 - Organisationsstruktur kann abgebildet werden
-    - Einkauf, Verkauf, Fertigung, Personal, Gäste, ..
+  - Einkauf, Verkauf, Fertigung, Personal, Gäste, ..
 - VLANs benötigen einen Router um Daten austauschen zu können
 - somit können logische Gruppen innerhalb eines physikalischen Netzes voneinander getrennt werden
 
@@ -118,15 +124,15 @@ Bekommt der Host ein ARP Reply, ist die Adresse bereits vergeben. Bekommt er kei
 # Vorteile
 
 - Performance
-    - Priorisierung von bestimmten Diensten wie VoIP
+  - Priorisierung von bestimmten Diensten wie VoIP
 - Sicherheit
-    - das Teilnetz der Ideenfabrik kann vom öffentlichen Gäste Netz getrennt werden
+  - das Teilnetz der Ideenfabrik kann vom öffentlichen Gäste Netz getrennt werden
 - Netzmanagement Upgrade
-    - logische Gruppen lassen sich flexibler verändern
+  - logische Gruppen lassen sich flexibler verändern
 - Orts- und Raumunabhängig
-    - ein großes Entwicklerstudio in Montreal und Paris ist im VLAN XYZ und kann so leichter Daten austauschen
+  - ein großes Entwicklerstudio in Montreal und Paris ist im VLAN XYZ und kann so leichter Daten austauschen
 - Dienste
-    - VoIP, Webserver, Games, ..
+  - VoIP, Webserver, Games, ..
 
 ---
 
@@ -157,8 +163,10 @@ Dabei wird in den 4 Byte des Ethernet Frames die Information abgespeichert.
 
 ---
 
-# 4. 
+# 4.
+
 # Wie bestimmt man die Broadcast Adresse eines IP Gerätes?
+
 # Warum muss die Subnetz Maske im Internet nicht mit übertragen werden?
 
 ---
@@ -172,13 +180,13 @@ Die Broadcast Adresse bekommt man durch die `ODER (OR)` Verknüpfung von IP Adre
 
 ---
 
-|                    	| erste 24 Bit   	| letzte 8 Bit   	|
-|--------------------	|--------------:	|--------------:	|
-| IP Adresse         	|    192.168.5. 	|      11101000 	|
-| :exclamation: + OR Verknüpfung     	|               	|               	|
-| negierte Netzmaske 	|        0.0.0. 	|      00000111 	|
-| =                  	|    192.168.5. 	|      11101111 	|
-| Broadcast Adresse  	|    192.168.5. 	|           239 	|
+|                                | erste 24 Bit | letzte 8 Bit |
+| ------------------------------ | -----------: | -----------: |
+| IP Adresse                     |   192.168.5. |     11101000 |
+| :exclamation: + OR Verknüpfung |              |              |
+| negierte Netzmaske             |       0.0.0. |     00000111 |
+| =                              |   192.168.5. |     11101111 |
+| Broadcast Adresse              |   192.168.5. |          239 |
 
 ---
 
@@ -200,15 +208,16 @@ Die Subnetzmaske ist nur im lokalen Netz gültig.
 # NAT - Network Address Translation
 
 > UPDATE :exclamation:
+>
 > - Empfängeradresse ~~Absenderadresse~~ durch eine andere ersetzen
 > - Änderungen im IP Header, dadurch ändert sich die Frame Check Sequence (FCS) auf Layer 2 .. eine Fehlerkorrektur auf, typisch mit Cyclic Redundancy Check (CRC 32 Bit)
+
 - Nutzung privater Adresseräume (bsp. 192.168.0.0/16)
 - Warum?
-    - Sicherheit durch verstecken des internen Netz
-    - mehrere Hosts können gleichzeitig eine Internetverbindung nutzen
+  - Sicherheit durch verstecken des internen Netz
+  - mehrere Hosts können gleichzeitig eine Internetverbindung nutzen
 
 ---
-
 
 # PAT - Port Adress Translation
 
@@ -244,8 +253,8 @@ Die Subnetzmaske ist nur im lokalen Netz gültig.
 > UPDATE :exclamation:
 
 - manche Protokolle übertragen die IP Adresse im Payload
-    - bsp. SIP und SDP
-    - beide sind VoIP Protokolle
+  - bsp. SIP und SDP
+  - beide sind VoIP Protokolle
 
 Du musst dir das so vorstellen. Das Telefon kennt zwar dir öffentliche IP Adresse vom VoIP Server, der Server kennt aber deine nicht. Denn im Payload steht bsp. 192.168.1.2 und die private IP Adresse ist von außen nicht erreichbar.
 
@@ -253,8 +262,10 @@ Du musst dir das so vorstellen. Das Telefon kennt zwar dir öffentliche IP Adres
 
 ---
 
-# 7. 
-# Berechne den brachliegenden Adressumfang der Class E. 
+# 7.
+
+# Berechne den brachliegenden Adressumfang der Class E.
+
 # Warum werden Class E Adressen angesichts des massiven Adressmangels nicht als normale Adressen verwendet?
 
 ---
@@ -264,8 +275,8 @@ Du musst dir das so vorstellen. Das Telefon kennt zwar dir öffentliche IP Adres
 Start Adresse ist 240.0.0.0 (führende Bits 1111) und die letzte Adresse ist 255.255.255.255. Es gibt keine Subnetz Maske, es gibt keine CIDR Notation, usw.
 
 - Brachliegende Adressen
-    - $Class-E$ = $2^{28}$ = 268.435.456
-    - $16 * 256 * 256 * 256$
+  - $Class-E$ = $2^{28}$ = 268.435.456
+  - $16 * 256 * 256 * 256$
 
 ---
 
@@ -273,7 +284,7 @@ Start Adresse ist 240.0.0.0 (führende Bits 1111) und die letzte Adresse ist 255
 
 TCP/IP Stacks im Betriebssystem wurden von Anfang an so konfiguriert, dass sie den Adressraum nicht akzeptieren.
 
-IPv6 wurde entwickelt und löst IPv4 ab. Das ändern des IPv4 TCP/IP Stacks wird nicht passieren, da alle IP Geräte neu konfiguriert werden müssten. 
+IPv6 wurde entwickelt und löst IPv4 ab. Das ändern des IPv4 TCP/IP Stacks wird nicht passieren, da alle IP Geräte neu konfiguriert werden müssten.
 
 ---
 
@@ -302,8 +313,10 @@ IPv6 wurde entwickelt und löst IPv4 ab. Das ändern des IPv4 TCP/IP Stacks wird
 
 ---
 
-## Zu 10.10.1.32/27 
+## Zu 10.10.1.32/27
+
 ### gehört 10.10.1.44
+
 ### aber nicht 10.10.1.90
 
 Von IP_Address_Match.png: Baccala@freesoft.orgderivative work: Zapyon (talk) - IP_Address_Match.png, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=12768693
@@ -316,13 +329,14 @@ Von IP_Address_Match.png: Baccala@freesoft.orgderivative work: Zapyon (talk) - I
 
 - ermöglicht maßgeschneiderte Subnetz Masken
 - mehrere Subnetz Masken können dadurch ermöglicht werden
- :arrow_right: Verschachtelung von Adressblöcken
+  :arrow_right: Verschachtelung von Adressblöcken
 
 # Vorteile
+
 - Routen im LAN werden zusammengefasst
 - Routing Tabelle wird reduziert
 - mehrere Teilnetze werden mit einem Eintrag zusammengefasst
- :arrow_right: Routen Aggregation
+  :arrow_right: Routen Aggregation
 
 ---
 
@@ -334,7 +348,7 @@ Von IP_Address_Match.png: Baccala@freesoft.orgderivative work: Zapyon (talk) - I
 
 # Hausaufgaben :smile:
 
-## Fleißig üben! 
+## Fleißig üben!
 
 Zum Beispiel hier: http://www.eex-online.de/informatik.php bei Netzwerke auf [CIDR](http://www.eex-online.de/informatik/cidr.html) und [VLSM](http://www.eex-online.de/informatik/vlsm.html) klicken. Es generiert dir Aufgaben, zeigt dir den Lösungsweg und die Lösung auf.
 
@@ -342,15 +356,15 @@ Zum Beispiel hier: http://www.eex-online.de/informatik.php bei Netzwerke auf [CI
 
 # VLSM Tabelle
 
-| IPs Anzahl |  2^ | Subnetz Anzahl |     Subnetz     |             Subnetz in Binär            |  /  |
-|:----------:|:---:|:--------------:|:---------------:|:---------------------------------------:|:---:|
-|     254    | 2^0 |        1       |  255.255.255.0  | 11.. 0000 0000 | /24 |
-|     126    | 2^1 |        2       | 255.255.255.128 | 11.. 1000 0000 | /25 |
-|     62     | 2^2 |        4       | 255.255.255.192 | 11.. 1100 0000 | /26 |
-|     30     | 2^3 |        8       | 255.255.255.224 | 11.. 1110 0000 | /27 |
-|     14     | 2^4 |       16       | 255.255.255.240 | 11.. 1111 0000 | /28 |
-|      6     | 2^5 |       32       | 255.255.255.248 | 11.. 1111 1000 | /29 |
-|      2     | 2^6 |       64       | 255.255.255.252 | 11.. 1111 1100 | /30 |
+| IPs Anzahl | 2^  | Subnetz Anzahl |     Subnetz     | Subnetz in Binär |  /  |
+| :--------: | :-: | :------------: | :-------------: | :--------------: | :-: |
+|    254     | 2^0 |       1        |  255.255.255.0  |  11.. 0000 0000  | /24 |
+|    126     | 2^1 |       2        | 255.255.255.128 |  11.. 1000 0000  | /25 |
+|     62     | 2^2 |       4        | 255.255.255.192 |  11.. 1100 0000  | /26 |
+|     30     | 2^3 |       8        | 255.255.255.224 |  11.. 1110 0000  | /27 |
+|     14     | 2^4 |       16       | 255.255.255.240 |  11.. 1111 0000  | /28 |
+|     6      | 2^5 |       32       | 255.255.255.248 |  11.. 1111 1000  | /29 |
+|     2      | 2^6 |       64       | 255.255.255.252 |  11.. 1111 1100  | /30 |
 
 ---
 
@@ -364,7 +378,7 @@ Was muss man tun?
 
 1. IP Adresse und Routing Einträge binär schreiben
 2. IP Adresse mit dem Routing Eintrag vergleichen
-    - :exclamation: Longest Prefix Match macht es klar, man sucht nach dem längsten übereinstimmenden Präfix
+   - :exclamation: Longest Prefix Match macht es klar, man sucht nach dem längsten übereinstimmenden Präfix
 3. Ein Paket wird dann über diese Route weiter geleitet.
 
 ---
@@ -377,34 +391,34 @@ Was muss man tun?
 
 # Die Routing Tabelle eines ISP umfasst unter anderem nachfolgende Einträge:
 
-|  Route  	|        IP       	| 1. Byte 	| 2. Byte Binär 	|  3. Byte 	|  4. Byte 	|
-|-------:	|---------------:	|-------:	|:-------------:	|:--------:	|:--------:	|
-| Route 1 	| 174.16.0.0 / 12 	|   174   	|    00010000   	| 00000000 	| 00000000 	|
-| Route 2 	| 174.16.0.0 / 18 	|   174   	|    00010000   	| 00000000 	| 00000000 	|
-| Route 3 	| 174.16.0.0 / 26 	|   174   	|    00010000   	| 00000000 	| 00000000 	|
-| Route 4 	|   0.0.0.0 / 0   	|    0    	|    00000000   	| 00000000 	| 00000000 	|
+|   Route |              IP | 1. Byte | 2. Byte Binär | 3. Byte  | 4. Byte  |
+| ------: | --------------: | ------: | :-----------: | :------: | :------: |
+| Route 1 | 174.16.0.0 / 12 |     174 |   00010000    | 00000000 | 00000000 |
+| Route 2 | 174.16.0.0 / 18 |     174 |   00010000    | 00000000 | 00000000 |
+| Route 3 | 174.16.0.0 / 26 |     174 |   00010000    | 00000000 | 00000000 |
+| Route 4 |     0.0.0.0 / 0 |       0 |   00000000    | 00000000 | 00000000 |
 
 ---
 
 # An welches der vier Ziele wird ein Paket mit nachfolgender IP Adresse weiter geleitet?
 
-|           IP 	| 1. Byte 	|  2. Byte 	|  3. Byte 	|  4. Byte 	|   / 	|   Route 	|
-|-------------:	|--------:	|---------:	|---------:	|---------:	|----:	|--------:	|
-|  174.16.0.10 	|     174 	| 00010000 	| 00000000 	| 00001010 	| /28 	| ? 	|
-| 174.18.54.89 	|     174 	| 00010010 	| 00110110 	| 01011001 	| /14 	| ? 	|
-| 174.16.35.27 	|     174 	| 00010000 	| 00100011 	| 00011011 	| /18 	| ? 	|
-| 174.34.56.63 	|     174 	| 00100010 	| 00111000 	| 00111111 	| /10 	| ? 	|
+|           IP | 1. Byte |  2. Byte |  3. Byte |  4. Byte |   / | Route |
+| -----------: | ------: | -------: | -------: | -------: | --: | ----: |
+|  174.16.0.10 |     174 | 00010000 | 00000000 | 00001010 | /28 |     ? |
+| 174.18.54.89 |     174 | 00010010 | 00110110 | 01011001 | /14 |     ? |
+| 174.16.35.27 |     174 | 00010000 | 00100011 | 00011011 | /18 |     ? |
+| 174.34.56.63 |     174 | 00100010 | 00111000 | 00111111 | /10 |     ? |
 
 ---
 
 # Lösung
 
-| IP           	| Route   	|
-|--------------	|---------	|
-| 174.16.0.10  	| Route 3 	|
-| 174.18.54.89 	| Route 1 	|
-| 174.16.35.27 	| Route 2 	|
-| 174.34.56.63 	| Route 4 	|
+| IP           | Route   |
+| ------------ | ------- |
+| 174.16.0.10  | Route 3 |
+| 174.18.54.89 | Route 1 |
+| 174.16.35.27 | Route 2 |
+| 174.34.56.63 | Route 4 |
 
 ---
 
@@ -415,18 +429,20 @@ Was muss man tun?
 # Subnetz Bildung
 
 ## IP 147.11.0.0 / 25
+
 ## Netzmaske 255.255.255.128 (/25)
 
-| Netz 	| Anzahl IPs (+2) 	|  2^ 	| Anzahl Adressen 	|        Adress Raum        	|  /  	|
-|:----:	|:---------------:	|:---:	|:---------------:	|:-------------------------:	|:---:	|
-|   A  	|      59 + 2     	| 2^6 	|        64       	|  147.11.0.0 - 147.11.0.63 	| /26 	|
-|   B  	|      2 + 2      	| 2^2 	|        4        	| 147.11.0.64 - 147.11.0.67 	| /30 	|
-|   C  	|      2 + 2      	| 2^2 	|        4        	| 147.11.0.68 - 147.11.0.71 	| /30 	|
+| Netz | Anzahl IPs (+2) | 2^  | Anzahl Adressen |        Adress Raum        |  /  |
+| :--: | :-------------: | :-: | :-------------: | :-----------------------: | :-: |
+|  A   |     59 + 2      | 2^6 |       64        | 147.11.0.0 - 147.11.0.63  | /26 |
+|  B   |      2 + 2      | 2^2 |        4        | 147.11.0.64 - 147.11.0.67 | /30 |
+|  C   |      2 + 2      | 2^2 |        4        | 147.11.0.68 - 147.11.0.71 | /30 |
 
 ---
 
 > Prüfungstipp, mach dir eine Tabelle.
 > Kleine Auswahl an Links mit verschiedenen Tabellen:
+
 - https://www.elektronik-kompendium.de/sites/net/0907201.htm
 - https://www.tecchannel.de/a/grundlagen-zu-routing-und-subnetzbildung-teil-3,434977,6
 - http://mywiki.ergun.de/index.php?title=IP-Adressen_Berechung_und_Subnetting
@@ -434,8 +450,10 @@ Was muss man tun?
 ---
 
 # 11. Ein Kunde eines ISP erhält 55 zusammenhängende Class C Adressen. Eine dieser Class C Adressen lautet 200.72.71.0.
-#    i. Wie lautet im optimalen Fall die CIDR Routing Anweisung im Router des ISP?
-#    ii. Ein anderer Kunde des ISP soll aus diesem Bereich seine Wunschnetz IP 200.72.100.0 erhalten. Wie lautet die Routing Tabelle in diesem Fall?
+
+# i. Wie lautet im optimalen Fall die CIDR Routing Anweisung im Router des ISP?
+
+# ii. Ein anderer Kunde des ISP soll aus diesem Bereich seine Wunschnetz IP 200.72.100.0 erhalten. Wie lautet die Routing Tabelle in diesem Fall?
 
 ---
 
@@ -449,12 +467,12 @@ Was muss man tun?
 2. gegebene Adresse 200.72.71.0 binär schreiben :arrow_right: "200.72.`01000111`.0"
 3. Netz ID berechnen
 
-|                   	| IP Byte 1,2 	| IP Byte 3 binär 	| IP Byte 4 	|
-|-------------------	|-------------	|-----------------	|-----------	|
-| IP Adresse        	| 200.72.     	| 01000111        	| .0        	|
-| :exclamation: + AND Verknüpfung 	|             	|                 	|           	|
-| /18               	| 255.255.    	| 11000000        	| .0        	|
-| Netz ID           	| 200.72.     	| 01000000        	| .0        	|
+|                                 | IP Byte 1,2 | IP Byte 3 binär | IP Byte 4 |
+| ------------------------------- | ----------- | --------------- | --------- |
+| IP Adresse                      | 200.72.     | 01000111        | .0        |
+| :exclamation: + AND Verknüpfung |             |                 |           |
+| /18                             | 255.255.    | 11000000        | .0        |
+| Netz ID                         | 200.72.     | 01000000        | .0        |
 
 4. Adressraum geht von 200.72.64.0 bis 200.72.127.0
 5. Einsatz von Longest Match Routing
@@ -472,7 +490,7 @@ Was muss man tun?
 i.
 220.56.132/24, 220.56.133/24, 220.56.134/24, 220.56.135/24
 
-ii. 
+ii.
 220.56.146.0/24, 220.56.147.0/24, 220.56.148.0/24, 220.56.149.0/24
 
 ---
@@ -480,7 +498,7 @@ ii.
 # Anleitung
 
 1. Du schreibst die IP binär hin und schaust wie weit beide übereinstimmen.
-    > Mach es dir einfach und lass den uninteressanten Teil weg.
+   > Mach es dir einfach und lass den uninteressanten Teil weg.
 2. Fasse die IPs zusammen
 3. Den übereinstimmen Teil als neue IP notieren
 4. Schrägstrichschreibweise anpassen
@@ -489,24 +507,23 @@ ii.
 
 # i.
 
-
-| IP            	|           	| 3. Byte  	| Routing                      	|
-|---------------	|-----------	|----------	|------------------------------	|
-| 220.56.132/24 	| "220.56." 	| 10000100 	|                              	|
-| 220.56.133/24 	| "220.56." 	| 10000101 	|                              	|
-| 220.56.134/24 	| "220.56." 	| 10000110 	|                              	|
-| 220.56.135/24 	| "220.56." 	| 10000111 	| :arrow_right: 220.56.132 /22 	|
+| IP            |           | 3. Byte  | Routing                      |
+| ------------- | --------- | -------- | ---------------------------- |
+| 220.56.132/24 | "220.56." | 10000100 |                              |
+| 220.56.133/24 | "220.56." | 10000101 |                              |
+| 220.56.134/24 | "220.56." | 10000110 |                              |
+| 220.56.135/24 | "220.56." | 10000111 | :arrow_right: 220.56.132 /22 |
 
 ---
 
 # ii.
 
-| IP              	|           	| 3. Byte  	| Routing                        	|
-|-----------------	|-----------	|----------	|--------------------------------	|
-| 220.56.146.0/24 	| "220.56." 	| 10010010 	|                                	|
-| 220.56.147.0/24 	| "220.56." 	| 10010011 	|                                	|
-| 220.56.148.0/24 	| "220.56." 	| 10010100 	|                                	|
-| 220.56.149.0/24 	| "220.56." 	| 10010101 	| :arrow_right: 220.56.144.0 /21 	|
+| IP              |           | 3. Byte  | Routing                        |
+| --------------- | --------- | -------- | ------------------------------ |
+| 220.56.146.0/24 | "220.56." | 10010010 |                                |
+| 220.56.147.0/24 | "220.56." | 10010011 |                                |
+| 220.56.148.0/24 | "220.56." | 10010100 |                                |
+| 220.56.149.0/24 | "220.56." | 10010101 | :arrow_right: 220.56.144.0 /21 |
 
 ---
 
@@ -516,4 +533,4 @@ Bitte per E-Mail an [mv068@hdm-stuttgart.de](mailto:mv068@hdm-stuttgart.de) oder
 
 # Bis nächste Woche :smile:
 
-> ```git pull``` nicht vergessen
+> `git pull` nicht vergessen

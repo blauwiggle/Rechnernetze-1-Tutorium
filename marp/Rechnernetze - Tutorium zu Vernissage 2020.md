@@ -4,16 +4,19 @@ theme: default #uncover #gaia #default
 class: invert
 paginate: true
 headingDivider: true
-footer: 'HdM Stuttgart - Rechnernetze - Tutorium | Copyright © Michael Vanhee, mv068@hdm-stuttgart.de, 2020'
+footer: "HdM Stuttgart - Rechnernetze - Tutorium | Copyright © Michael Vanhee, mv068@hdm-stuttgart.de, 2020"
 ---
 
 # Rechnernetze - Tutorium
+
 # zu Vernissage SS 2020
 
-Link zu den Folien :arrow_down: 
+Link zu den Folien :arrow_down:
 https://github.com/blauwiggle/Rechnernetze-1-Tutorium
 
 ---
+
+<!--footer: "" -->
 
 # Aufgabe - Gruppe 1 (A und B)
 
@@ -41,8 +44,11 @@ Während der Entwurfsphase einer (fiktiven) neuen Netzwerkstruktur für die HdM 
 # 2. Wie lautet die Subnetzmaske in der binären und dezimalen Schreibweise?
 
 ## $normal = 255.255.252.0$
+
 ## $binär = 11111111.11111111.11111100.00000000$
+
 ## $hexadezimal = FF.FF.FC.00$
+
 ## $dezimal = 4294966272$
 
 ---
@@ -73,22 +79,23 @@ Während der Entwurfsphase einer (fiktiven) neuen Netzwerkstruktur für die HdM 
 ---
 
 ## NA - Netz Adresse / ID: 141.62.0.0
+
 ## SM - Subnetzmaske: 255.255.252.0
 
-|   IP  	| SM 1er = Netzanteil 	| SM 1er = Netzanteil 	| SM 1er = Subnetzanteil 	|          	|   Netz ID  	|
-|:-----:	|:-------------------:	|:-------------------:	|:----------------------:	|:--------:	|:----------:	|
-|   NA  	|       10001101      	|       00111110      	|        00000000        	| 00000000 	|            	|
-|   SM  	|       11111111      	|       11111111      	|        111111-00       	| 00000000 	|            	|
-| 1. NA 	|       11000000      	|       00111110      	|        000000-00       	| 00000000 	|  141.62.0  	|
-| 2. NA 	|       11000000      	|       00111110      	|        000001-00       	| 00000000 	|  141.62.4  	|
+|  IP   | SM 1er = Netzanteil | SM 1er = Netzanteil | SM 1er = Subnetzanteil |          | Netz ID  |
+| :---: | :-----------------: | :-----------------: | :--------------------: | :------: | :------: |
+|  NA   |      10001101       |      00111110       |        00000000        | 00000000 |          |
+|  SM   |      11111111       |      11111111       |       111111-00        | 00000000 |          |
+| 1. NA |      11000000       |      00111110       |       000000-00        | 00000000 | 141.62.0 |
+| 2. NA |      11000000       |      00111110       |       000001-00        | 00000000 | 141.62.4 |
 
 ---
 
-|   IP  	| SM 1er = Netzanteil 	| SM 1er = Netzanteil 	| SM 1er = Subnetzanteil 	|          	|   Netz ID  	|
-|:-----:	|:-------------------:	|:-------------------:	|:----------------------:	|:--------:	|:----------:	|
-| 3. NA 	|       11000000      	|       00111110      	|        000010-00       	| 00000000 	|  141.62.8  	|
-| 4. NA 	|       11000000      	|       00111110      	|        000011-00       	| 00000000 	|  141.62.12 	|
-| n. NA 	|       11000000      	|       00111110      	|        111111-00       	| 00000000 	| 141.62.252 	|
+|  IP   | SM 1er = Netzanteil | SM 1er = Netzanteil | SM 1er = Subnetzanteil |          |  Netz ID   |
+| :---: | :-----------------: | :-----------------: | :--------------------: | :------: | :--------: |
+| 3. NA |      11000000       |      00111110       |       000010-00        | 00000000 |  141.62.8  |
+| 4. NA |      11000000       |      00111110       |       000011-00        | 00000000 | 141.62.12  |
+| n. NA |      11000000       |      00111110       |       111111-00        | 00000000 | 141.62.252 |
 
 ---
 
@@ -122,20 +129,18 @@ Untersuchen Sie nachfolgende IP-Adressen. Welche der Adressen können als Rechne
 1. IP binär schreiben
 2. /28 (255.255.255.240) binär schreiben
 
-
 ---
-
 
 # 192.168.28.33 / 28
 
-|  Netz ID 	|          	|           	|          	|
-|:--------:	|:--------:	|:---------:	|:--------:	|
-| 11000000 	| 10101000 	| 000111000 	| 00100001 	|
-|   + AND  	|          	|           	|          	|
-| 11111111 	| 11111111 	|  11111111 	| 11110000 	|
-|     =    	|          	|           	|          	|
-| 11000000 	| 10101000 	| 000111000 	|  0010000 	|
-|    192   	|    168   	|     28    	|    32    	|
+| Netz ID  |          |           |          |
+| :------: | :------: | :-------: | :------: |
+| 11000000 | 10101000 | 000111000 | 00100001 |
+|  + AND   |          |           |          |
+| 11111111 | 11111111 | 11111111  | 11110000 |
+|    =     |          |           |          |
+| 11000000 | 10101000 | 000111000 | 0010000  |
+|   192    |   168    |    28     |    32    |
 
 ## Ja, die IP ist gültig.
 
@@ -143,14 +148,14 @@ Untersuchen Sie nachfolgende IP-Adressen. Welche der Adressen können als Rechne
 
 # 192.168.28.112 / 28
 
-|  Netz ID 	|          	|           	|          	|
-|:--------:	|:--------:	|:---------:	|:--------:	|
-| 11000000 	| 10101000 	| 000111000 	| 01110000 	|
-|   + AND  	|          	|           	|          	|
-| 11111111 	| 11111111 	|  11111111 	| 11110000 	|
-|     =    	|          	|           	|          	|
-| 11000000 	| 10101000 	| 000111000 	|  0111000 	|
-|    192   	|    168   	|     28    	|    112   	|
+| Netz ID  |          |           |          |
+| :------: | :------: | :-------: | :------: |
+| 11000000 | 10101000 | 000111000 | 01110000 |
+|  + AND   |          |           |          |
+| 11111111 | 11111111 | 11111111  | 11110000 |
+|    =     |          |           |          |
+| 11000000 | 10101000 | 000111000 | 0111000  |
+|   192    |   168    |    28     |   112    |
 
 ## Nein, die IP ist nicht gültig für einen Host, da es die Netz ID ist.
 
@@ -168,14 +173,14 @@ Untersuchen Sie nachfolgende IP-Adressen. Welche der Adressen können als Rechne
 
 ---
 
-| Broadcast 	|          	|              	|              	|
-|:---------:	|:--------:	|:------------:	|:------------:	|
-|  11000000 	| 10101000 	|   000111000  	|   10101111   	|
-|    + OR   	|    mit   	| invertierter 	| Subnetzmaske 	|
-|  00000000 	| 00000000 	|   00000000   	|   00001111   	|
-|     =     	|          	|              	|              	|
-|  11000000 	| 10101000 	|   000111000  	|   10101111   	|
-|    192    	|    168   	|      28      	|      175     	|
+| Broadcast |          |              |              |
+| :-------: | :------: | :----------: | :----------: |
+| 11000000  | 10101000 |  000111000   |   10101111   |
+|   + OR    |   mit    | invertierter | Subnetzmaske |
+| 00000000  | 00000000 |   00000000   |   00001111   |
+|     =     |          |              |              |
+| 11000000  | 10101000 |  000111000   |   10101111   |
+|    192    |   168    |      28      |     175      |
 
 ## Nein, die IP ist nicht gültig für einen Host, da es die BC ist.
 
@@ -185,13 +190,13 @@ Untersuchen Sie nachfolgende IP-Adressen. Welche der Adressen können als Rechne
 
 Ergänzen Sie für die angegebenen Subnetzmasken die fehlenden Broadcastadressen für die IP 9.5.2.30.
 
-| Subnetzmaske  	| Broadcastadresse 	|
-|---------------	|------------------	|
-| 255.0.0.0     	| 9.255.255.255    	|
-| 255.255.0.0   	| 9.5.255.255      	|
-| 255.255.255.0 	| 9.5.2.255        	|
-| 255.255.192.0 	| 9.5. ???         	|
-| 255.255.224.0 	| 9.5. ???         	|
+| Subnetzmaske  | Broadcastadresse |
+| ------------- | ---------------- |
+| 255.0.0.0     | 9.255.255.255    |
+| 255.255.0.0   | 9.5.255.255      |
+| 255.255.255.0 | 9.5.2.255        |
+| 255.255.192.0 | 9.5. ???         |
+| 255.255.224.0 | 9.5. ???         |
 
 ---
 
@@ -201,13 +206,13 @@ Ergänzen Sie für die angegebenen Subnetzmasken die fehlenden Broadcastadressen
 2. Subnetzmaske invertiert (auch Wildcard genannt) binär schreiben
 3. Logische OR Verknüpfung anwenden
 
-| Subnetzmaske  	| Broadcastadresse 	|
-|---------------	|------------------	|
-| 255.0.0.0     	| 9.255.255.255    	|
-| 255.255.0.0   	| 9.5.255.255      	|
-| 255.255.255.0 	| 9.5.2.255        	|
-| 255.255.192.0 	| 9.5.63.255       	|
-| 255.255.224.0 	| 9.5.31.255       	|
+| Subnetzmaske  | Broadcastadresse |
+| ------------- | ---------------- |
+| 255.0.0.0     | 9.255.255.255    |
+| 255.255.0.0   | 9.5.255.255      |
+| 255.255.255.0 | 9.5.2.255        |
+| 255.255.192.0 | 9.5.63.255       |
+| 255.255.224.0 | 9.5.31.255       |
 
 ---
 
@@ -220,6 +225,7 @@ Geben Sie für die nachfolgende IP Adresse an.
 - Subnetz Broadcast Adresse
 
 ## IP: 193.174.24.180
+
 ## SN: 255.255.255.240
 
 ---
@@ -300,4 +306,4 @@ Bitte per E-Mail an [mv068@hdm-stuttgart.de](mailto:mv068@hdm-stuttgart.de) oder
 
 # Bis nächste Woche :smile:
 
-> ```git pull``` nicht vergessen
+> `git pull` nicht vergessen

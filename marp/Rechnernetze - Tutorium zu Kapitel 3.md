@@ -4,20 +4,23 @@ theme: default #uncover #gaia #default
 class: invert
 paginate: true
 headingDivider: true
-footer: 'HdM Stuttgart - Rechnernetze - Tutorium | Copyright © Michael Vanhee, mv068@hdm-stuttgart.de, 2020'
+footer: "HdM Stuttgart - Rechnernetze - Tutorium | Copyright © Michael Vanhee, mv068@hdm-stuttgart.de, 2020"
 ---
 
 # Rechnernetze - Tutorium
+
 # zu Kapitel 3
 
-Link zu den Folien :arrow_down: 
+Link zu den Folien :arrow_down:
 https://github.com/blauwiggle/Rechnernetze-1-Tutorium
 
 ---
 
+<!--footer: "" -->
+
 1. Ist das CSMA/CD-Verfahren ein **_faires_** Zugriffsverfahren?
 2. Beschreibe, wie sich bei CSMA/CD-Ethernet Distanz, Paketlänge und Bitrate
-gegenseitig beeinflussen.
+   gegenseitig beeinflussen.
 3. Wie wird die **_Taktsynchronisation_** zwischen zwei Stationen bei Ethernet gelöst?
 4. Warum werden die Signale im Ethernet **_codiert_** übertragen?
 5. An welchem Grundproblem leidet Gigabit-Ethernet und wie wird dieses Problem gelöst? Beschreibe die Folgen. Was versteht man unter **_Skew Delay_**?
@@ -25,8 +28,7 @@ gegenseitig beeinflussen.
 ---
 
 6. Erläuter die Begriffe **_Flow Control_** und **_Link Aggregation_**.
-7. Metro Ethernet, ein großes aktuelles Thema in den Carrier Netzen. Beurteile die Eignung von Ethernet in Metro Netzen.
-8. Ethernet Frames (10 MBit/s Ethernet) sollen mit Hilfe eines Protokoll Sniffers (z.B. dem in der Vorlesung eingesetzten Kabelhai) *eingefangen* und ausgewertet werden. Wie viele Rahmen pro Sekunde sind maximal zu erwarten? Berechne die Rahmenrate einer Station in Abhängigkeit von der Größe der Payload (kleinster und größter Wert der Payload-Länge). Berechne auch den eigentlichen Datendurchsatz (ab Layer 3).
+7. Ethernet Frames (10 MBit/s Ethernet) sollen mit Hilfe eines Protokoll Sniffers (z.B. dem in der Vorlesung eingesetzten Kabelhai) _eingefangen_ und ausgewertet werden. Wie viele Rahmen pro Sekunde sind maximal zu erwarten? Berechne die Rahmenrate einer Station in Abhängigkeit von der Größe der Payload (kleinster und größter Wert der Payload-Länge). Berechne auch den eigentlichen Datendurchsatz (ab Layer 3).
 
 ---
 
@@ -52,18 +54,19 @@ Es gibt etliche Organisationen, die an der Entwicklung von Standards beteilt sin
 
 - Für uns ist die IEEE hier besonders wichtig
 - [RFCs](https://www.rfc-editor.org) (Request for Comments) schlagen Standards vor (nicht alle, nur einige)
-    - IETF publiziert die RFCs
-    - die Entwicklung des Internets wird vorangetrieben
-    - die Genehmigung (als Stream bezeichnet) durchläuft verschiedene Stadien
-    - fast alle wichtigen Internet Standards sind aus RFCs entstanden
-        - [RFC 768 - UDP](https://www.rfc-editor.org/info/rfc768)
-        - [RFC 1166 - IP Adresse](https://www.rfc-editor.org/info/rfc1166)
-
+  - IETF publiziert die RFCs
+  - die Entwicklung des Internets wird vorangetrieben
+  - die Genehmigung (als Stream bezeichnet) durchläuft verschiedene Stadien
+  - fast alle wichtigen Internet Standards sind aus RFCs entstanden
+    - [RFC 768 - UDP](https://www.rfc-editor.org/info/rfc768)
+    - [RFC 1166 - IP Adresse](https://www.rfc-editor.org/info/rfc1166)
 
 ---
 
 # 802.x beschäftigt sich mit lokalen Netzwerken
+
 ## Wichtige IEEE 802.x Standards
+
 - 802.3 CSMA/CD
 - 802.3u Fast Ethernet
 - 802.3ab 1000 BASE-T
@@ -76,12 +79,15 @@ Es gibt etliche Organisationen, die an der Entwicklung von Standards beteilt sin
 ---
 
 ## Zentralistisch
+
 - Vermittlungsstelle organisiert Slot zur Datenübertragung
 
 ## Deterministisch
+
 - Zugriff wird über Mechanismen geregelt, sodass keine Kollisionen auftreten können
 
 ## Nicht-Deterministisch
+
 - Jede Station kann jederzeit zufällig senden
 - Keine Regeln beim Senden (konkurrierend), bei Kollisionen wird erneut gesendet
 
@@ -108,26 +114,30 @@ By Bystander - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php
 ---
 
 ## Raum Multiplex
+
 - Übertragunskanäle werden zur parallelen Nutzung durch mehrere Sender und Empfänger gebündelt
-    - Personen sprechen an verschiedenen Orten miteinander und stören sich bei genügend großem Abstand nicht.
+  - Personen sprechen an verschiedenen Orten miteinander und stören sich bei genügend großem Abstand nicht.
 
 ---
 
 ## Frequenz Multiplex
+
 - Die Signale werden in unterschiedliche Frequenz Bereiche getrennt
-    - Eine Hundepfeife erzeugt unhörbare Geräusche. Nebenbei hörst du einen Podcast.
+  - Eine Hundepfeife erzeugt unhörbare Geräusche. Nebenbei hörst du einen Podcast.
 
 ---
 
 ## Zeit Multiplex
+
 - Signale werden zeitversertzt übertragen.
-    - In der Ponyhof Schulklasse hat nur ein Sprecher gleichzeitig das Wort (asynchron). Auf der Google I/O hat jeder Redner einen Zeitslot bestimmter Länge (synchron).
+  - In der Ponyhof Schulklasse hat nur ein Sprecher gleichzeitig das Wort (asynchron). Auf der Google I/O hat jeder Redner einen Zeitslot bestimmter Länge (synchron).
 
 ---
 
 ## Code Multiplex
+
 - Signale werden verschieden codiert
-    - Wenn mehrere Gespräche in verschiedenen Sprachen in einem Raum stattfinden, hört man seine Muttersprache heraus. Bekannte Personen erkennt man am Klang ihrer Stimme
+  - Wenn mehrere Gespräche in verschiedenen Sprachen in einem Raum stattfinden, hört man seine Muttersprache heraus. Bekannte Personen erkennt man am Klang ihrer Stimme
 
 ---
 
@@ -148,7 +158,7 @@ By Bystander - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php
 
 ---
 
-# Ja. 
+# Ja.
 
 ## Da niemand beim Senden bevorzugt wird.
 
@@ -161,12 +171,15 @@ By Bystander - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php
 ---
 
 ## CS - Carrier Sense (Träger Zustandserkennung)
+
 Jede Station prüft, ob das Medium frei ist
 
 ## MA - Multiple Access (Mehrfachzugriff)
+
 Mehrere Stationen teilen sich das Medium
 
 ## CD - Collision Detection (Kollisionserkennung)
+
 Wenn mehrere Stationen gleichzeitig senden, erkennen sie die Kollision
 
 ---
@@ -188,15 +201,18 @@ Wenn mehrere Stationen gleichzeitig senden, erkennen sie die Kollision
 ---
 
 # Netzausdehnung und Laufzeitbudget
+
 ## Distanz, Paketlänge und Bitrate stehen im CSMA/CD Ethernet in direktem Zusammenhang!
 
 ---
 
 ## Beispiel
+
 - Übertragungsgeschwindigkeit bei Ethernet mit 10 MBit / Sekunde
 - Framelänge von 64 Byte (512 bit)
 
 ## Ziel
+
 - Während des Sendens eine Kollision erkennen
 
 ---
@@ -213,13 +229,13 @@ Wenn mehrere Stationen gleichzeitig senden, erkennen sie die Kollision
 
 # Netzausdehnung und Laufzeitbudget
 
-| Geschwindigkeit 	| Typ | Ausdehnung in Metern  	| Zeit  	|
-|---:	    |:---:              |---:	            |---:	|
-| 10 MBit  	| Ethernet  	    |* 5.000 Meter  	| 51,2 µs |
-| 100 MBit  | Fast-Ethernet  	| 500 Meter             | 5,12 µs  	|
-| 1.000 MBit| Gigabit-Ethernet  | 50 Meter              | 0,512 µs|
+| Geschwindigkeit |       Typ        | Ausdehnung in Metern |     Zeit |
+| --------------: | :--------------: | -------------------: | -------: |
+|         10 MBit |     Ethernet     |       \* 5.000 Meter |  51,2 µs |
+|        100 MBit |  Fast-Ethernet   |            500 Meter |  5,12 µs |
+|      1.000 MBit | Gigabit-Ethernet |             50 Meter | 0,512 µs |
 
-## * Kabeleigenschaften wie Dämpfung, Schirmung und Verarbeitungszeit begrenzen die maximale Ausdehnung auf 3.000 Meter. 
+## \* Kabeleigenschaften wie Dämpfung, Schirmung und Verarbeitungszeit begrenzen die maximale Ausdehnung auf 3.000 Meter.
 
 ---
 
@@ -228,13 +244,15 @@ Wenn mehrere Stationen gleichzeitig senden, erkennen sie die Kollision
 ---
 
 # Präambel
+
 - 7 Bytes
 - dient der **_Takt Synchronisation_**
-- alternierende Bitfolge *101010...1010*
+- alternierende Bitfolge _101010...1010_
 
 # SFD
+
 - 1 Byte
-- auf diese folgt der Start Frame Delimiter (SFD) mit der Bitfolge *10101011*
+- auf diese folgt der Start Frame Delimiter (SFD) mit der Bitfolge _10101011_
 
 Dann beginnt die MAC Adresse und somit der eigentliche Inhalt ...
 
@@ -255,19 +273,21 @@ Von Stefan Schmidt - Enhancement of Manchester Encoding, Gemeinfrei, https://com
 
 ---
 
-# 5. An welchem Grundproblem leidet Gigabit-Ethernet und wie wird dieses Problem gelöst? Beschreibe die Folgen. 
+# 5. An welchem Grundproblem leidet Gigabit-Ethernet und wie wird dieses Problem gelöst? Beschreibe die Folgen.
 
 ---
 
 # Problem
+
 - es lässt Half-Duplex Verbindungen zu, daher wird
 - CSMA/CD benötigt und es ist eine
 - sehr geringe Längenausdehnung möglich
-    - Zeit verkürzt sich, in der man Kollisionen erkennen kann
+  - Zeit verkürzt sich, in der man Kollisionen erkennen kann
 
 ---
 
 # Lösung
+
 - Carrier-Extension
 - Frame Bursting
 - 4 Aderpaare Vollduplex
@@ -290,15 +310,18 @@ Die Performance bei kleineren Datenpaketen wird durch die Carrier Extension vers
 ## Adernpaare
 
 2 adrig
->Coaxkabel Halbduplex Geschwindigkeit bis 10 Mbit/s
->Definierte Pausen bei CSMA/CD, jeder bekommt Zeit zum quatschen
+
+> Coaxkabel Halbduplex Geschwindigkeit bis 10 Mbit/s
+> Definierte Pausen bei CSMA/CD, jeder bekommt Zeit zum quatschen
 
 4 adrig
->TP-Kabel Halb- / Vollduplex Geschwindigkeit bis 2x 100 Mbit/s
->Auf 4 Adern kann man getrennt in beide Richtungen alles abwickeln
+
+> TP-Kabel Halb- / Vollduplex Geschwindigkeit bis 2x 100 Mbit/s
+> Auf 4 Adern kann man getrennt in beide Richtungen alles abwickeln
 
 8 adrig
->TP-Kabel Vollduplex Geschwindigkeit bis 2x 1000 Mbit/s und 2x 10.000 Mbit/s
+
+> TP-Kabel Vollduplex Geschwindigkeit bis 2x 1000 Mbit/s und 2x 10.000 Mbit/s
 
 Link zum nachlesen: http://www.elektronik-kompendium.de/sites/kom/0301281.htm
 
@@ -307,7 +330,7 @@ Link zum nachlesen: http://www.elektronik-kompendium.de/sites/kom/0301281.htm
 ## PAM5 Signalcodierung
 
 | Kombination | V / Doppelader |
-|-------------|---------------:|
+| ----------- | -------------: |
 | 000         |            0 V |
 | 001         |          0,5 V |
 | 010         |            1 V |
@@ -316,7 +339,6 @@ Link zum nachlesen: http://www.elektronik-kompendium.de/sites/kom/0301281.htm
 | 101         |          0,5 V |
 | 110         |           -1 V |
 | 111         |        - 0,5 V |
-
 
 ![bg right:50% 90%](https://www.itwissen.info/lex-images/pam5-codierung-mit-vier-bitkombinationen.png)
 
@@ -330,7 +352,7 @@ Link zum nachlesen: http://www.elektronik-kompendium.de/sites/kom/0301281.htm
 
 - geringer Längenunterschied der Adernpaare im Twisted Pair Kabel
 - gute Kabel haben eine kleine Skew Delay
-- erfordert sorgfältiges *crimpen*
+- erfordert sorgfältiges _crimpen_
 - hohe Qualitätsanforderungen an den Hersteller
 
 ---
@@ -340,9 +362,10 @@ Link zum nachlesen: http://www.elektronik-kompendium.de/sites/kom/0301281.htm
 ---
 
 # Flow Control (Flusssteuerung)
+
 - Empfänger kann ein Pause Signal senden
-    - falls der Sender zu viele Daten sendet
-    - um einne Pufferüberlauf mit Datenverlust zu verhindern
+  - falls der Sender zu viele Daten sendet
+  - um einne Pufferüberlauf mit Datenverlust zu verhindern
 - Verhinderung von Paketverlust
 - Verhinderung von zu hoher Latenz
 
@@ -361,22 +384,7 @@ Link zum nachlesen: http://www.elektronik-kompendium.de/sites/kom/0301281.htm
 
 ---
 
-# 7. Metro Ethernet, ein großes aktuelles Thema in den Carrier Netzen. Beurteile die Eignung von Ethernet in Metro Netzen.
-
----
-
-# Vorteile
-
-- Skalierbar
-- Quality of Service (QoS)
-- Dienste
-- Verfügbarkeit
-- Verbindungsmanagement
-- kostengünstig
-
----
-
-# 8. Ethernet Frames (10 MBit/s Ethernet) sollen mit Hilfe eines Protokoll Sniffers (z.B. dem in der Vorlesung eingesetzten Kabelhai) *eingefangen* und ausgewertet werden. Wie viele Rahmen pro Sekunde sind maximal zu erwarten? Berechne die Rahmenrate einer Station in Abhängigkeit von der Größe der Payload (kleinster und größter Wert der Payload-Länge). Berechne auch den eigentlichen Datendurchsatz (ab Layer 3).
+# 7. Ethernet Frames (10 MBit/s Ethernet) sollen mit Hilfe eines Protokoll Sniffers (z.B. dem in der Vorlesung eingesetzten Kabelhai) _eingefangen_ und ausgewertet werden. Wie viele Rahmen pro Sekunde sind maximal zu erwarten? Berechne die Rahmenrate einer Station in Abhängigkeit von der Größe der Payload (kleinster und größter Wert der Payload-Länge). Berechne auch den eigentlichen Datendurchsatz (ab Layer 3).
 
 ---
 
@@ -397,6 +405,7 @@ Link zum nachlesen: http://www.elektronik-kompendium.de/sites/kom/0301281.htm
 # Umwandlung der Paketlänge in Bit
 
 ## $84 \: byte * 8 = 672 \: bit$
+
 ## $1538 \: byte * 8 = 12304 \: bit$
 
 ---
@@ -423,4 +432,4 @@ Bitte per E-Mail an [mv068@hdm-stuttgart.de](mailto:mv068@hdm-stuttgart.de) oder
 
 # Bis nächste Woche :smile:
 
-> ```git pull``` nicht vergessen
+> `git pull` nicht vergessen
