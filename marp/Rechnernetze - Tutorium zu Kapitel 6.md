@@ -271,7 +271,7 @@ Urgent Pointer
 
 Options
 
-> enthälte Zusatzinformationen
+> enthält Zusatzinformationen
 
 Data
 
