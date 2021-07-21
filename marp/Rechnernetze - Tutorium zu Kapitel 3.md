@@ -365,7 +365,7 @@ Link zum nachlesen: http://www.elektronik-kompendium.de/sites/kom/0301281.htm
 
 - Empfänger kann ein Pause Signal senden
   - falls der Sender zu viele Daten sendet
-  - um einne Pufferüberlauf mit Datenverlust zu verhindern
+  - um einen Pufferüberlauf mit Datenverlust zu verhindern
 - Verhinderung von Paketverlust
 - Verhinderung von zu hoher Latenz
 
@@ -380,7 +380,7 @@ Link zum nachlesen: http://www.elektronik-kompendium.de/sites/kom/0301281.htm
 
 - Ausfallsicherheit
 - Lastverteilung
-- Geringerer Konfigurations Aufwand (zum Beispiel nur eine IP-Adresse)
+- Geringerer Konfigurationsaufwand (zum Beispiel nur eine IP-Adresse)
 
 ---
 

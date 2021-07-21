@@ -20,7 +20,7 @@ https://github.com/blauwiggle/Rechnernetze-1-Tutorium
 <!--footer: "" -->
 
 1. Erläutere das Prinzip der IP Fragmentierung. Wer fragmentiert warum und wie? Wer setzt die Fragmente wieder zusammen?
-2. Welche Vorteile hat der Einsatz von IPv6? Welche Hindernisse bei der Migration siehst du? Durch welche Ansätze versucht IPv6 die Veerarbeitungsgeschwindigkeit in Routern zu erhöhen?
+2. Welche Vorteile hat der Einsatz von IPv6? Welche Hindernisse bei der Migration siehst du? Durch welche Ansätze versucht IPv6 die Verarbeitungsgeschwindigkeit in Routern zu erhöhen?
 3. Grenze MTU und MSS voneinander ab.
 4. Definiere die Begriffe Root Name Server, DNS Prefetching und DNS Round Robin.
 5. Erläutere den Aufbau des TCP Rahmens und die Funktion der einzelnen Felder.
@@ -34,7 +34,7 @@ https://github.com/blauwiggle/Rechnernetze-1-Tutorium
    - Paketverlust und Paketverdopplung
    - fehlerhaft adressierte Ports
 9. Was versteht man unter der TCP Flusssteuerung?
-10. Erläutere das in der Vorlesung vorgestellte TCP Zustanddiagramm.
+10. Erläutere das in der Vorlesung vorgestellte TCP Zustandsdiagramm.
 11. Markiere die Felder des IP und TCP Header, die nach erfolgreichem Verbindungsaufbau während der Phase der Datenübertragung über das Internet nicht konstant bleiben.
 
 ---
@@ -87,7 +87,7 @@ Dabei übernimmt jedes Fragment den IP Header.
 
 # Welche Hindernisse bei der Migration siehst du?
 
-# Durch welche Ansätze versucht IPv6 die Veerarbeitungsgeschwindigkeit in Routern zu erhöhen?
+# Durch welche Ansätze versucht IPv6 die Verarbeitungsgeschwindigkeit in Routern zu erhöhen?
 
 ---
 
@@ -135,7 +135,7 @@ Ein kompletter Umstieg bedeutet hohe Kosten.
 
 ---
 
-# Durch welche Ansätze versucht IPv6 die Veerarbeitungsgeschwindigkeit in Routern zu erhöhen?
+# Durch welche Ansätze versucht IPv6 die Verarbeitungsgeschwindigkeit in Routern zu erhöhen?
 
 - Header optimiert
   :arrow_right: wenig genutzte Pflichtfelder bei IPv4 werden optional
@@ -271,9 +271,9 @@ Urgent Pointer
 
 Options
 
-> enthälter Zusatzinformationen
+> enthälte Zusatzinformationen
 
-data
+Data
 
 > der eigentliche Payload
 
