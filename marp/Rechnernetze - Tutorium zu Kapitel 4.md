@@ -100,13 +100,13 @@ https://github.com/blauwiggle/Rechnernetze-1-Tutorium
 
 | Verfahren         | Beschreibung                                                                         | Vorteile                                                                                  | Nachteile                                         |
 | ----------------- | ------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------- | ------------------------------------------------- |
-| Store and Forward | Gesamtes Paket wird vollständig eingelesen und nur bei Fehlerfreiheit weitergeleitet | Fehlerhafter Pakete werden herausgefiltert, daher gibt es vielfältige Filtermöglichkeiten | Relativ große Verzögerung, abhängig von der Größe |
+| Store and Forward | Gesamtes Paket wird vollständig eingelesen und nur bei Fehlerfreiheit weitergeleitet | Fehlerhafte Pakete werden herausgefiltert, daher gibt es vielfältige Filtermöglichkeiten | Relativ große Verzögerung, abhängig von der Größe |
 
 ---
 
 | Verfahren          | Beschreibung                                                                                                                                    | Vorteile       | Nachteile                                                           |
 | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- | -------------- | ------------------------------------------------------------------- |
-| Adaptive Switching | Es ist ein Mix aus Cut-Through und Store and Forward. Switch startet mit Store and Forward und schaltet bei wenigern Fehlern auf Cut Through um | sehr effizient | teuer                                                               |
+| Adaptive Switching | Es ist ein Mix aus Cut-Through und Store and Forward. Switch startet mit Store and Forward und schaltet bei wenigen Fehlern auf Cut Through um | sehr effizient | teuer                                                               |
 | Fragment Free      | Der Switch liest die ersten 64 Byte des Frames ein und leitet dieses bei Fehlerfreiheit weiter                                                  | schnell        | Lässt fehlerhafte Pakete (fehlerhaft nach den ersten 64 Byte) durch |
 
 ---
@@ -231,7 +231,7 @@ Dabei wird Switch Port A and einen weiteren Port B gespiegelt. Dabei ist Port Mi
 
 ---
 
-- Port an dem Switch zu anderem Switch Daten von jedem VLAN senden kann
+- Port, an dem ein Switch zu einem anderem Switch Daten von jedem VLAN senden kann
 - Switch fügt an den Frame VLAN-Tag Information für Zielswitch hinzu
 - VLAN-Tag wird vom Zielswitch wieder entfernt
 

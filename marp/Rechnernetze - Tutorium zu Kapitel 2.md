@@ -38,7 +38,7 @@ In das Kabel werden gleiche Signale mit gegensätzlicher Polarität eingespeist.
 Das ist beispielsweise für ISDN oder Ethernet wichtig.
 
 - Zwei Adern einer Doppelader liefern gegensätzliche Polarität
-  :arrow*right: keine Strahlung, wenn die Summe der Signale \_ideal* null ist
+  :arrow_right: keine Strahlung, wenn die Summe der Signale *ideal* null ist
 - Die Differenz der Signale bildet dann das eigentliche Datensignal
 
 ---
@@ -236,7 +236,7 @@ Das steht für Dichte Wellenlängen-Multiplex und gilt als zurzeit leistungsstä
 
 ## Frequenz Multiplex
 
-> Multiplexing wwerden wir im Tutorium zu Kapitel 3 durchgehen.
+> Multiplexing werden wir im Tutorium zu Kapitel 3 durchgehen.
 
 ---
 
