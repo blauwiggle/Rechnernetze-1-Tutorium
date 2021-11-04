@@ -1,10 +1,10 @@
 ---
-marp: true
+marp: false
 theme: default #uncover #gaia #default
 class: invert
 paginate: true
 headingDivider: true
-footer: "HdM Stuttgart - Rechnernetze - Tutorium | Copyright © Michael Vanhee, mv068@hdm-stuttgart.de, 2020"
+footer: "HdM Stuttgart - Rechnernetze - Tutorium | Copyright © Michael Vanhee, mv068@hdm-stuttgart.de, 2021"
 ---
 
 # Rechnernetze - Tutorium
@@ -51,6 +51,14 @@ Das ist beispielsweise für ISDN oder Ethernet wichtig.
 ---
 
 # 2. Wozu gibt es Kabelkategorien? Erläutere die Begriffe S/STP, S/UTP, ...
+
+---
+
+## Kategorien
+- ?
+
+## Mit steigender Kategorie
+- ?
 
 ---
 
@@ -112,6 +120,15 @@ Die verfügbare Bandbreite und die Länge des Kabels stehen in Korrelation. Übe
 
 ## XX steht für die Gesamtschirmung
 
+- U = ?
+- F = ?
+- S = ?
+- SF = ?
+
+---
+
+## XX steht für die Gesamtschirmung
+
 - U = ohne Schirm (ungeschirmt)
 - F = Folienschirm (beschichtete Kunststofffolie)
 - S = Geflechtschirm (Drahtgeflecht)
@@ -121,9 +138,24 @@ Die verfügbare Bandbreite und die Länge des Kabels stehen in Korrelation. Übe
 
 ## Y steht für die Aderpaarschirmung
 
+- U = ?
+- F = ?
+- S = ?
+
+---
+
+## Y steht für die Aderpaarschirmung
+
 - U = ohne Schirm (ungeschirmt)
 - F = Folienschirm (beschichtete Kunststofffolie)
 - S = Geflechtschirm (Drahtgeflecht)
+
+---
+
+## ZZ steht für die Verseilungsart
+
+- TP = ?
+- QP = ?
 
 ---
 
@@ -256,6 +288,10 @@ Das steht für Dichte Wellenlängen-Multiplex und gilt als zurzeit leistungsstä
 
 ---
 
+
+
+---
+
 Von Deadlyhappen - Eigenes Werk, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=25174721
 
 ![bg 100% right:70%](https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Strukturierte_Verkabelung.svg/1024px-Strukturierte_Verkabelung.svg.png)
@@ -282,6 +318,12 @@ Von Deadlyhappen - Eigenes Werk, CC BY-SA 3.0, https://commons.wikimedia.org/w/i
 
 ## Multimodefaser mit Gradientenindex Profil
 
+- ?
+
+---
+
+## Multimodefaser mit Gradientenindex Profil
+
 - es werden mehrere Lichtwellen gleichzeitig geschickt
 - an den Wänden der Faser wird das Signal weich reflektiert
 - die Brechzahl des Kerns nimmt parabelförmig zum Mantel ab
@@ -294,12 +336,24 @@ Von Deadlyhappen - Eigenes Werk, CC BY-SA 3.0, https://commons.wikimedia.org/w/i
 
 ## Multimodefaser mit Stufenindex Profil
 
+- ?
+
+---
+
+## Multimodefaser mit Stufenindex Profil
+
 - es werden mehrere Lichtwellen gleichzeitig geschickt
 - an den Wänden der Faser wird das Signal hart reflektiert
 - die Brechzahl fällt zwischen Kern und Mantel scharf ab
 - wird für Verbindungskabel im Patchschrank verwendet
 
 ![bg contain 80% right:40%](https://github.com/blauwiggle/Rechnernetze-1-Tutorium/blob/master/marp/images/02_stufefin.jpeg?raw=true)
+
+---
+
+## Monomodefaser
+
+- ?
 
 ---
 
@@ -323,7 +377,7 @@ Von Deadlyhappen - Eigenes Werk, CC BY-SA 3.0, https://commons.wikimedia.org/w/i
 
 # Weitere Fragen?
 
-Bitte per E-Mail an [mv068@hdm-stuttgart.de](mailto:mv068@hdm-stuttgart.de) oder auf GitHub direkt.
+Bitte per Mail an [mv068@hdm-stuttgart.de](mailto:mv068@hdm-stuttgart.de) oder auf GitHub direkt.
 
 # Bis nächste Woche :smile:
 
