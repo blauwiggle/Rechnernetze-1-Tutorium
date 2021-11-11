@@ -4,7 +4,7 @@ theme: default #uncover #gaia #default
 class: invert
 paginate: true
 headingDivider: true
-footer: "HdM Stuttgart - Rechnernetze - Tutorium | Copyright © Michael Vanhee, mv068@hdm-stuttgart.de, 2020"
+footer: "HdM Stuttgart - Rechnernetze - Tutorium | mv068@hdm-stuttgart.de, 2021"
 ---
 
 # Rechnernetze - Tutorium
@@ -35,6 +35,14 @@ https://github.com/blauwiggle/Rechnernetze-1-Tutorium
 # Lass uns erstmal ein paar Dinge vorab klären.
 
 ## Wer führt Standards ein, was sind Zugriffsverfahren, was ist ein Multiplex :scream_cat:
+
+---
+
+# Organistationen in der Netzwerktechnik (Standards)
+
+Es gibt etliche Organisationen, die an der Entwicklung von Standards beteilt sind.
+
+- ?
 
 ---
 
@@ -168,6 +176,8 @@ By Bystander - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php
 
 # Für was steht CSMA/CD?
 
+# Was machen die Abkürzungen?
+
 ---
 
 ## CS - Carrier Sense (Träger Zustandserkennung)
@@ -197,6 +207,10 @@ Wenn mehrere Stationen gleichzeitig senden, erkennen sie die Kollision
 # Was jedoch wichtig ist, ist wie sich Distanz, Paketlänge und Bitrate gegenseitig beeinflussen.
 
 ## Hast du eine Idee, was es damit aufsich hat?
+
+---
+
+
 
 ---
 
@@ -249,7 +263,7 @@ Wenn mehrere Stationen gleichzeitig senden, erkennen sie die Kollision
 - dient der **_Takt Synchronisation_**
 - alternierende Bitfolge _101010...1010_
 
-# SFD
+# SFD (Start Frame Delimiter)
 
 - 1 Byte
 - auf diese folgt der Start Frame Delimiter (SFD) mit der Bitfolge _10101011_
@@ -363,11 +377,23 @@ Link zum nachlesen: http://www.elektronik-kompendium.de/sites/kom/0301281.htm
 
 # Flow Control (Flusssteuerung)
 
+- ?
+
+---
+
+# Flow Control (Flusssteuerung)
+
 - Empfänger kann ein Pause Signal senden
   - falls der Sender zu viele Daten sendet
   - um einen Pufferüberlauf mit Datenverlust zu verhindern
 - Verhinderung von Paketverlust
 - Verhinderung von zu hoher Latenz
+
+---
+
+# Link Aggregation
+
+- ?
 
 ---
 
